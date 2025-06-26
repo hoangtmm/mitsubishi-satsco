@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
-import tailwindcss from '@tailwindcss/postcss7-compat';
+import tailwindcss from '@tailwindcss/vite';
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -13,6 +14,6 @@ export default defineConfig({
   server: {
     host: true,
     port: process.env.PORT || 5173,
-    allowedHosts: ['mitsubishi-satsco.onrender.com'],
+    allowedHosts: ['mitsubishi-satsco.onrender.com'], 
   },
 });
