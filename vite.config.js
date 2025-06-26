@@ -1,18 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 import path from 'path';
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/postcss7-compat';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      // eslint-disable-next-line no-undef
       '@': path.resolve(__dirname, './src'),
-      allowedHosts: ['mitsubishi-satsco.onrender.com']
-
-    }
+    },
   },
-})
+  server: {
+    host: true,
+    port: process.env.PORT || 5173,
+    allowedHosts: ['mitsubishi-satsco.onrender.com'],
+  },
+});
