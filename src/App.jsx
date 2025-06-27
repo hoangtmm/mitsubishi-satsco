@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/layouts/Header.jsx";
 import Footer from "./layouts/Footer";
 import { Outlet } from "react-router";
+import QuickQuoteModal from "./components/QuickQuoteModal";
 const App = () => {
   return (
     <div className="">
@@ -9,6 +10,7 @@ const App = () => {
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
         <div className="mt-2">
           <Outlet />
+           <QuickQuoteModal />
         </div>
       </div>
       <Footer />
