@@ -1,5 +1,4 @@
 import React from "react";
-
 const models = [
   { name: "All-New Triton", price: "655.000.000 VNĐ" },
   { name: "Xforce", price: "599.000.000 VNĐ" },
@@ -9,7 +8,6 @@ const models = [
   { name: "Pajero Sport", price: "1.130.000.000 VNĐ" },
   { name: "Attrage", price: "380.000.000 VNĐ" },
 ];
-
 const sections = [
   { title: "DST CONCEPT", subtitle: "", bg: "/images/dst.jpg" },
   { title: "RA MẮT DST CONCEPT", subtitle: "", bg: "/images/launch.jpg" },
@@ -17,9 +15,8 @@ const sections = [
   { title: "ĐỒNG HÀNH CÙNG 100.000 GIA ĐÌNH VIỆT", subtitle: "", bg: "/images/family.jpg" },
   { title: "ƯU ĐÃI MUA XE MỚI", subtitle: "", bg: "/images/promo.jpg" },
 ];
-
 const Home = () => (
-  <main className="mt-[70px]">
+  <main className="pt-[100px]">
     {/* Hero Carousel */}
     <div className="relative h-[400px] md:h-[600px] overflow-hidden">
       {/* Thay thế bằng slider nếu cần */}
