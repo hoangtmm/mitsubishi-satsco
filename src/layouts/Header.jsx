@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaChevronDown } from "react-icons/fa";
+
 const Header = () => {
   const [atTop, setAtTop] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,13 +43,12 @@ const Header = () => {
             </div>
           </div>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">BẢNG GIÁ XE</a>
-          <div className="relative group">
-            <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-block">
-              XE MITSUBISHI
+          <div className="relative group inline-block">
+            <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-flex items-center gap-1">
+              XE MITSUBISHI <FaChevronDown className="text-xs mt-[1px]" />
             </span>
-
             {/* Dropdown content */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 hidden group-hover:flex bg-white text-black mt-2 shadow-lg p-4 z-50 w-[1000px] flex-wrap justify-start">
+          <div className="absolute left-1/2 transform -translate-x-1/2 hidden group-hover:flex bg-white text-black mt-2 shadow-lg p-4 z-50 w-[1200px] flex-wrap justify-start">
               {[
                 {
                   name: "Mitsubishi Xforce",
@@ -103,16 +103,18 @@ const Header = () => {
           </div>
 
 
+
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">KHUYẾN MÃI</a>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">DỊCH VỤ</a>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">TIN TỨC</a>
         </nav>
         {/* Hotline */}
         <div className="hidden md:flex items-center">
-          <div className="bg-yellow-400 text-red-600 font-bold px-4 py-2 rounded-full border border-yellow-500 text-xs text-center leading-tight">
-            <div>Tư vấn (miễn phí)</div>
-            <div className="text-lg">081.585.3333</div>
+          <div className="animate-pulse bg-yellow-400 text-red-600 font-bold px-4 py-2 rounded-full border border-yellow-500 text-xs text-center leading-tight shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div className="text-[13px] font-semibold">Tư vấn (miễn phí)</div>
+            <div className="text-lg text-red-700 font-extrabold tracking-wide">081.585.3333</div>
           </div>
+
         </div>
 
         {/* Mobile header layout */}
