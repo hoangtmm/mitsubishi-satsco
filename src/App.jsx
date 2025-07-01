@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="bg-gray-100 min-h-screen pt-[15px]">
       <Header />
-      <main>
+      <main >
         <Outlet />
         <QuickQuoteModal />
       </main>
