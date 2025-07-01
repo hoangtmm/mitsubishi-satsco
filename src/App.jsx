@@ -6,7 +6,7 @@ import QuickQuoteModal from "./components/QuickQuoteModal";
 
 const App = () => {
   return (
-    <div className="bg-gray-100 min-h-screen pt-[15px]">
+    <div className="bg-gray-100 min-h-screen pt-[15px] overflow-x-hidden">
       <Header />
       <main >
         <Outlet />
