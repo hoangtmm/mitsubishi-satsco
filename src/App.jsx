@@ -3,16 +3,15 @@ import Header from "@/layouts/Header.jsx";
 import Footer from "./layouts/Footer";
 import { Outlet } from "react-router";
 import QuickQuoteModal from "./components/QuickQuoteModal";
+
 const App = () => {
   return (
-    <div className="">
+    <div className="bg-gray-100 min-h-screen pt-[15px]">
       <Header />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-        <div className="mt-2">
-          <Outlet />
-           <QuickQuoteModal />
-        </div>
-      </div>
+      <main>
+        <Outlet />
+        <QuickQuoteModal />
+      </main>
       <Footer />
     </div>
   );
