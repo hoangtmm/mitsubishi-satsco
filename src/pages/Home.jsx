@@ -26,6 +26,69 @@ const Home = () => (
         <button className="mt-4 px-6 py-2 bg-red-600 text-white">Tìm hiểu thêm</button>
       </div>
     </div>
+    {/* OUTLANDER PROMOTION SECTION */}
+<div className="w-full bg-white py-10 px-4 md:px-20">
+  <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 items-center">
+    {/* LEFT: Banner image with text */}
+    <div className="flex-1 relative">
+      <img src="/images/outlander-main.png" alt="Outlander" className="w-full h-auto" />
+      {/* Text overlays */}
+      <div className="absolute top-6 left-6 md:left-12">
+        <h2 className="text-red-600 text-4xl md:text-5xl font-bold">THÀNH CÔNG</h2>
+        <h2 className="text-red-600 text-4xl md:text-5xl font-bold mt-32 md:mt-44">TỔ ẤM</h2>
+      </div>
+    </div>
+
+    {/* RIGHT: Feature boxes */}
+    <div className="flex-1 space-y-6">
+      {/* Header */}
+      <div className="text-black">
+        <h3 className="text-xl md:text-2xl font-bold">NEW MITSUBISHI</h3>
+        <h2 className="text-3xl md:text-4xl font-extrabold">OUTLANDER</h2>
+        <p className="text-lg font-semibold mt-2">Vẹn toàn thành công, chu toàn tổ ấm</p>
+      </div>
+
+      {/* Row 1: Phong cách hơn */}
+      <div>
+        <h4 className="font-bold text-sm md:text-base border-b-2 border-red-600 inline-block mb-2">PHONG CÁCH HƠN</h4>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="text-center">
+            <img src="/images/outlander-phongcach-1.png" alt="" className="mx-auto w-[90px]" />
+            <p className="text-xs mt-1">Thiết kế ngoại thất</p>
+          </div>
+          <div className="text-center">
+            <img src="/images/outlander-phongcach-2.png" alt="" className="mx-auto w-[90px]" />
+            <p className="text-xs mt-1">Màn hình cảm ứng 8 inch</p>
+          </div>
+          <div className="text-center">
+            <img src="/images/outlander-phongcach-3.png" alt="" className="mx-auto w-[90px]" />
+            <p className="text-xs mt-1">Ghế da hoạ tiết kim cương</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Row 2: An toàn hơn */}
+      <div>
+        <h4 className="font-bold text-sm md:text-base border-b-2 border-red-600 inline-block mb-2">AN TOÀN HƠN</h4>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="text-center">
+            <img src="/images/outlander-antoan-1.png" alt="" className="mx-auto w-[90px]" />
+            <p className="text-xs mt-1">7 túi khí an toàn</p>
+          </div>
+          <div className="text-center">
+            <img src="/images/outlander-antoan-2.png" alt="" className="mx-auto w-[90px]" />
+            <p className="text-xs mt-1">FCM</p>
+          </div>
+          <div className="text-center">
+            <img src="/images/outlander-antoan-3.png" alt="" className="mx-auto w-[90px]" />
+            <p className="text-xs mt-1">LDW</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     {/* Multi Sections */}
     <div className="mt-10 space-y-10">

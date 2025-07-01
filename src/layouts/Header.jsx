@@ -43,64 +43,66 @@ const Header = () => {
             </div>
           </div>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">BẢNG GIÁ XE</a>
-          <div className="relative group inline-block">
-            <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-flex items-center gap-1">
-              XE MITSUBISHI <FaChevronDown className="text-xs mt-[1px]" />
-            </span>
-            {/* Dropdown content */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 hidden group-hover:flex bg-white text-black mt-2 shadow-lg p-4 z-50 w-[1200px] flex-wrap justify-start">
-              {[
-                {
-                  name: "Mitsubishi Xforce",
-                  price: "599.000.000 VNĐ",
-                  image: "/images/Mitsubishi_Xforce.jpg",
-                },
-                {
-                  name: "Xpander Cross 2025",
-                  price: "698.000.000 VNĐ",
-                  image: "/images/Xpander_Cross_2025.jpg",
-                },
-                {
-                  name: "Mitsubishi Attrage",
-                  price: "380.000.000 VNĐ",
-                  image: "/images/Mitsubishi_Attrage.jpg",
-                },
-                {
-                  name: "Mitsubishi Xpander 2025",
-                  price: "560.000.000 VNĐ",
-                  image: "/images/Mitsubishi_Xpander_2025.jpg",
-                },
-                {
-                  name: "Mitsubishi Triton",
-                  price: "650.000.000 VNĐ",
-                  image: "/images/Mitsubishi_Triton.jpg",
-                },
-                {
-                  name: "Mitsubishi Outlander",
-                  price: "825.000.000 VNĐ",
-                  image: "/images/Mitsubishi_Outlander.jpg",
-                },
-                {
-                  name: "Mitsubishi Pajero Sport",
-                  price: "650.000.000 VNĐ",
-                  image: "/images/Mitsubishi_Pajero_Sport.jpg",
-                },
-              ].map((car, index) => (
-                <div
-                  key={index}
-                  className="w-[180px] p-2 hover:scale-105 transition duration-300"
-                >
-                  <img
-                    src={car.image}
-                    alt={car.name}
-                    className="rounded w-full h-auto object-cover"
-                  />
-                  <p className="font-bold mt-2 text-sm">{car.name}</p>
-                  <p className="text-red-600 text-xs">Giá: từ {car.price}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+         <div className="relative group inline-block">
+  <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-flex items-center gap-1">
+    XE MITSUBISHI <FaChevronDown className="text-xs mt-[1px]" />
+  </span>
+
+  {/* Dropdown content */}
+  <div className="absolute left-1/2 transform -translate-x-1/2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-white text-black mt-2 shadow-lg p-4 z-50 w-[1000px] flex-wrap justify-start flex">
+    {[
+      {
+        name: "Mitsubishi Xforce",
+        price: "599.000.000 VNĐ",
+        image: "/images/Mitsubishi_Xforce.jpg",
+      },
+      {
+        name: "Xpander Cross 2025",
+        price: "698.000.000 VNĐ",
+        image: "/images/Xpander_Cross_2025.jpg",
+      },
+      {
+        name: "Mitsubishi Attrage",
+        price: "380.000.000 VNĐ",
+        image: "/images/Mitsubishi_Attrage.jpg",
+      },
+      {
+        name: "Mitsubishi Xpander 2025",
+        price: "560.000.000 VNĐ",
+        image: "/images/Mitsubishi_Xpander_2025.jpg",
+      },
+      {
+        name: "Mitsubishi Triton",
+        price: "650.000.000 VNĐ",
+        image: "/images/Mitsubishi_Triton.jpg",
+      },
+      {
+        name: "Mitsubishi Outlander",
+        price: "825.000.000 VNĐ",
+        image: "/images/Mitsubishi_Outlander.jpg",
+      },
+      {
+        name: "Mitsubishi Pajero Sport",
+        price: "650.000.000 VNĐ",
+        image: "/images/Mitsubishi_Pajero_Sport.jpg",
+      },
+    ].map((car, index) => (
+      <div
+        key={index}
+        className="w-[180px] p-2 hover:scale-105 transition duration-300"
+      >
+        <img
+          src={car.image}
+          alt={car.name}
+          className="rounded w-full h-auto object-cover"
+        />
+        <p className="font-bold mt-2 text-sm">{car.name}</p>
+        <p className="text-red-600 text-xs">Giá: từ {car.price}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
 
 
 
