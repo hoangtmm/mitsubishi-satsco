@@ -106,10 +106,6 @@ const Header = () => {
               ))}
             </div>
           </div>
-
-
-
-
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">KHUYẾN MÃI</a>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">DỊCH VỤ</a>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">TIN TỨC</a>
@@ -147,7 +143,7 @@ const Header = () => {
           </button>
           {/* Logo ở giữa */}
           <img
-            src="/logo.webp"
+             src="/images/logo.jpg"
             alt="Mitsubishi-Logo"
             className={`transition-transform duration-300 transform ${atTop ? "scale-125" : "scale-100"} h-12`}
             style={{ transformOrigin: "center center" }}
