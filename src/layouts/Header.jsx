@@ -114,7 +114,7 @@ const Header = () => {
         <div className="hidden md:flex items-center">
           <div className="animate-pulse bg-yellow-400 text-red-600 font-bold px-4 py-2 rounded-full border border-yellow-500 text-xs text-center leading-tight shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div className="text-[13px] font-semibold">Tư vấn (miễn phí)</div>
-            <div className="text-lg text-red-700 font-extrabold tracking-wide">0947700923</div>
+            <div className="text-lg text-red-700 font-extrabold tracking-wide">094 7700 923</div>
           </div>
 
         </div>
