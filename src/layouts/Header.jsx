@@ -5,6 +5,7 @@ const Header = () => {
   const [atTop, setAtTop] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
@@ -16,10 +17,44 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 bg-black text-white px-4 transition-all duration-300 ${atTop ? "py-3" : "py-1 shadow-lg"}`}
+      className={`fixed top-0 left-0 w-full z-50 bg-black text-white px-4 transition-all duration-300 ${
+        atTop ? "py-3" : "py-1 shadow-lg"
+      }`}
     >
+      <style>
+        {`
+          @media (min-width: 768px) and (max-width: 1023px) {
+            .header-ipad-menu {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+            }
+            .header-ipad-menu .header-tintuc {
+              flex-basis: 100%;
+              margin-top: 0.1rem;
+              text-align: left;
+              justify-content: flex-start;
+              padding-left: 110px;
+            }
+          }
+          @media (min-width: 1024px) {
+            .header-ipad-menu {
+              flex-wrap: nowrap !important;
+            }
+            .header-ipad-menu .header-tintuc {
+              flex-basis: unset !important;
+              margin-top: 0 !important;
+              padding-left: 0 !important;
+              text-align: left;
+            }
+          }
+        `}
+      </style>
       <div className="max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300">
         {/* Logo */}
         <div className="hidden md:flex items-center gap-2 transition-all duration-300">
@@ -32,7 +67,7 @@ const Header = () => {
           />
         </div>
         {/* Main menu */}
-        <nav className="hidden md:flex items-center gap-4 font-bold text-sm">
+        <nav className="hidden md:flex font-bold text-sm header-ipad-menu">
           <span
             onClick={() => window.location.href = "/"}
             className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 transition-all"
@@ -108,7 +143,13 @@ const Header = () => {
           </div>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">KHUYẾN MÃI</a>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">DỊCH VỤ</a>
-          <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">TIN TỨC</a>
+          {/* TIN TỨC - chỉ xuống hàng trên iPad khi chật */}
+          <a
+            href="#"
+            className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all header-tintuc"
+          >
+            TIN TỨC
+          </a>
         </nav>
         {/* Hotline */}
         <div className="hidden md:flex items-center">
@@ -116,12 +157,9 @@ const Header = () => {
             <div className="text-[13px] font-semibold">Tư vấn (miễn phí)</div>
             <div className="text-lg text-red-700 font-extrabold tracking-wide">094 7700 923</div>
           </div>
-
         </div>
-
-        {/* Mobile header layout */}
+        {/* Mobile giữ nguyên không chỉnh */}
         <div className="md:hidden flex items-center justify-between w-full">
-          {/* Menu icon bên trái */}
           <button
             className="bg-red-600 p-2 rounded-md"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -141,19 +179,16 @@ const Header = () => {
               />
             </svg>
           </button>
-          {/* Logo ở giữa */}
           <img
-             src="/images/logo.jpg"
+            src="/images/logo.jpg"
             alt="Mitsubishi-Logo"
             className={`transition-transform duration-300 transform ${atTop ? "scale-125" : "scale-100"} h-12`}
             style={{ transformOrigin: "center center" }}
           />
-          {/* Icon tìm kiếm bên phải */}
           <FaSearch className="text-white text-xl" />
         </div>
-
       </div>
-      {/* Mobile dropdown menu */}
+      {/* Mobile dropdown menu giữ nguyên */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-black text-white fixed top-[60px] left-0 right-0 z-40">
           <div className="border-t border-white/10">
@@ -184,4 +219,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;

@@ -8,7 +8,7 @@ const carData = [
   {
     name: "ALL NEW XPANDER",
     fuel: "6.9L/100Km",
-    price: "555,000,000 ₫",
+    price: "560,000,000 ₫",
     image: "/images/xpander.png",
   },
   {
@@ -26,7 +26,7 @@ const carData = [
   {
     name: "NEW ATTRAGE",
     fuel: "4.42L/100Km",
-    price: "375,000,000 ₫",
+    price: "380,000,000 ₫",
     image: "/images/attrage.png",
   },
   {
