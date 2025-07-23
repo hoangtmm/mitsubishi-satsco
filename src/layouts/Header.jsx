@@ -17,44 +17,12 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 bg-black text-white px-4 transition-all duration-300 ${
         atTop ? "py-3" : "py-1 shadow-lg"
       }`}
     >
-      <style>
-        {`
-          @media (min-width: 768px) and (max-width: 1023px) {
-            .header-ipad-menu {
-              display: flex;
-              flex-wrap: wrap;
-              align-items: center;
-              justify-content: center;
-              width: 100%;
-            }
-            .header-ipad-menu .header-tintuc {
-              flex-basis: 100%;
-              margin-top: 0.1rem;
-              text-align: left;
-              justify-content: flex-start;
-              padding-left: 110px;
-            }
-          }
-          @media (min-width: 1024px) {
-            .header-ipad-menu {
-              flex-wrap: nowrap !important;
-            }
-            .header-ipad-menu .header-tintuc {
-              flex-basis: unset !important;
-              margin-top: 0 !important;
-              padding-left: 0 !important;
-              text-align: left;
-            }
-          }
-        `}
-      </style>
       <div className="max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300">
         {/* Logo */}
         <div className="hidden md:flex items-center gap-2 transition-all duration-300">
@@ -142,8 +110,7 @@ const Header = () => {
             </div>
           </div>
           <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">KHUYẾN MÃI</a>
-          <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">DỊCH VỤ</a>
-          {/* TIN TỨC - chỉ xuống hàng trên iPad khi chật */}
+          <a href="/thu-tuc-tra-gop" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">THỦ TỤC TRẢ GÓP</a>
           <a
             href="#"
             className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all header-tintuc"

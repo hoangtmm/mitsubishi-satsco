@@ -12,9 +12,8 @@ const App = () => {
         <Outlet />
         <QuickQuoteModal />
       </main>
-      <Footer />
        <FloatingHotline />
-
+      <Footer />
     </div>
   );
 };
