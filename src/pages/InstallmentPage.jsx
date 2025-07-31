@@ -159,7 +159,6 @@ const InstallmentPage = () => (
         </main>
 
         <FloatingHotline />
-        <Footer />
     </>
 );
 
