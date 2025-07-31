@@ -43,7 +43,7 @@ const InstallmentPage = () => (
         <main className="bg-gray-100">
             <div className="container mx-auto px-4 py-12 space-y-12">
 
-                {/* Tiêu đề + mô tả + ví dụ */}
+                {/* Tiêu đề + mô tả + ví dụ */} 
                 <section className="bg-white p-8 rounded-lg shadow">
                     <p className="text-gray-700 mb-6">{loanDescription}</p>
                     <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
