@@ -4,6 +4,7 @@ import Home from "@/pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
 import InstallmentPage from "@/pages/InstallmentPage";
+import CarDetailPage from "@/pages/CarDetailPage"; 
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         path: "/thu-tuc-tra-gop",
         element: <InstallmentPage  />,
       },
+        { path: "/:slug", element: <CarDetailPage /> },
     ],
   },
 ]);
