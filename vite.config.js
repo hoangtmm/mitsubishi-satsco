@@ -14,6 +14,9 @@ export default defineConfig({
   server: {
     host: true,
     port: process.env.PORT || 5173,
-    allowedHosts: ['mitsubishi-satsco.onrender.com'], 
+    allowedHosts: ['test.vps-sep490.io.vn'], 
   },
+   preview: {
+    allowedHosts: ['study.vps-sep490.io.vn']
+  }
 });
