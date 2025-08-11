@@ -14,7 +14,7 @@ const Home = () => (
           DÒNG XE KINH DOANH TẠI
         </div>
         <div className="font-extrabold text-2xl sm:text-3xl uppercase text-red-700 mt-0 inline-block relative">
-          MITSUBISHI TÂN BÌNH
+          MITSUBISHI TÂN BÌNHHHHHH
           <span className="block h-[3px] w-20 bg-red-700 mx-auto mt-1 rounded absolute left-1/2 -translate-x-1/2"></span>
         </div>
       </div>
