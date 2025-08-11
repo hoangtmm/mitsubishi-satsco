@@ -1,0 +1,27 @@
+name: Next Deployment
+
+on:
+  push:
+    branches: [production]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy using ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: 22
+        script: |
+          cd /services/mitsubishi-satsco
+          git fetch origin
+          git checkout production
+          git pull
+          docker build -t mitsubishi-app .
+          docker stop mitsubishi-app-container || true
+          docker rm mitsubishi-app-container || true
+          docker run -d --name mitsubishi-app-container -p 4000:3000 mitsubishi-app
+          
