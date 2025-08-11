@@ -5,55 +5,77 @@ const carData = [
     fuel: "5.5L/100Km",
     price: "599,000,000 ₫",
     image: "/images/xforce.png",
-    // ==== Thông tin chi tiết mở rộng ====
     banner: "/images/xforce.png",
     hotline: "094 7700 923",
-    promo: "Giảm 50% phí trước bạ, tặng bảo hiểm vật chất & nhiều ưu đãi khác",
-    priceBox: [
-      { version: "Xforce Standard", price: "599.000.000" },
-      { version: "Xforce Premium", price: "650.000.000" },
+    promo: [
+      "Giảm 50% Lệ Phí Trước Bạ",
+      "Tặng bảo hiểm thân vỏ 01 năm",
+      "Quà tặng phụ kiện hấp dẫn từ đại lý Mitsubishi Tân Bình",
+      "Hỗ trợ chi phí đăng ký xe"
+    ],
+    priceTable: [
+      { version: "Mitsubishi Xforce Ultimate (1tone)", price: "705 triệu đ" },
+      { version: "Mitsubishi Xforce Premium", price: "680 triệu đ" },
+      { version: "Mitsubishi Xforce Exceed", price: "640 triệu đ" },
+      { version: "Mitsubishi Xforce GLX", price: "599 triệu đ" }
     ],
     installments: [
-      { prepay: "120.000.000", months: 60, rate: "7.5%", monthly: "8.500.000" },
+      { prepay: "120.000.000", months: 60, rate: "7.5%", monthly: "8.500.000" }
     ],
     overview: {
       title: "Tổng quan Mitsubishi Xforce",
-      image: "/images/xforce-overview.png",
+      image: "/images/xforce-overview.jpg",
       content: `
-New Mitsubishi Xforce 2025 là mẫu SUV đô thị phong cách năng động, thiết kế mới hoàn toàn, không gian nội thất rộng rãi và hàng loạt công nghệ an toàn vượt trội...
+**New Mitsubishi Xforce 2025**
+
+Mitsubishi Xforce 2025 là một mẫu xe SUV cỡ nhỏ thuộc dòng B-SUV tại Việt Nam. Mitsubishi Xforce được Mitsubishi Việt Nam ra mắt chính thức vào tháng 6/2024 và hiện đang là một mẫu gầm cao cỡ nhỏ đang bán chạy nhất tại thị trường Việt Nam, được phân phối trực tiếp bởi Mitsubishi Tân Bình.
+
+**Động cơ & Phiên bản Mitsubishi Xforce**
+
+Mitsubishi Xforce được trang bị khối động cơ xăng 4 xy-lanh 1.5L MIVEC, CVT, Cầu trước, Ngôn ngữ thiết kế Dynamic Shield, 5 Chỗ, Mâm hợp kim 18-inch.
+
+Các phiên bản:
+- Mitsubishi Xforce Ultimate
+- Mitsubishi Xforce Premium
+- Mitsubishi Xforce Exceed
+- Mitsubishi Xforce GLX
+<b>Thông số kỹ thuật Mitsubishi Xforce</b><br/>
+<img src="/images/xforce-specs.jpg" alt="Thông số kỹ thuật Mitsubishi Xforce" style="max-width:600px;width:100%"/>
+<br/>
+<b>Trang Thiết Bị Mitsubishi Xforce</b><br/>
+<img src="/images/xforce-accessory.jpg" alt="Trang thiết bị Xforce" style="max-width:600px;width:100%"/>
       `
     },
+
+    // ----- Phần ngoại thất data-driven (chỉ riêng Xforce mới có) -----
+    exteriorSection: {
+      title: "NGOẠI THẤT MITSUBISHI XFORCE",
+      blocks: [
+        {
+          subtitle: "Đầu xe",
+          desc: "Nhìn từ xa đầu xe Mitsubishi Xforce 2025 trông hiện đại và khỏe khoắn. Nằm giữa trung tâm là cụm lưới tản nhiệt hình khối, kích thước lớn. Mắt cá lăng tạo hình họa tiết lưới xếp tầng tăng thêm chiều sâu thị giác.",
+          images: [
+            { src: "/images/xforce-front.jpg", alt: "Ngoại thất Mitsubishi Xforce" },
+            { src: "/images/xforce-front-detail1.jpg", alt: "Đèn chiếu sáng Mitsubishi Xforce", caption: "Cụm đèn chiếu sáng Mitsubishi Xforce 2024 dạng T-shape kết cấu phân tầng kết hợp với dải LED ban ngày hình chữ L" },
+            { src: "/images/xforce-front-detail2.jpg", alt: "Cản trước Mitsubishi Xforce", caption: "Nằm liền kề là cụm đèn chiếu sáng dạng T-shape kết cấu phân tầng. ... Bọc bên ngoài cụm đèn là miếng ốp nhôm to bản mang đến nét thể thao, vững chãi cho xe." }
+          ]
+        }
+      ]
+    },
     versions: [
-      "Xforce Standard", "Xforce Premium"
+      "Xforce Ultimate",
+      "Xforce Premium",
+      "Xforce Exceed",
+      "Xforce GLX"
     ],
     equipment: [
       {
-        title: "Trang thiết bị Mitsubishi Xforce",
-        image: "/images/xforce-equipment.png",
-        content: `Danh sách tính năng nổi bật: Đèn LED Projector, Cảm biến lùi, Camera 360, dàn âm thanh Yamaha, v.v...`
+        title: "Trang Thiết Bị Mitsubishi Xforce",
+        image: "/images/xforce-accessory.jpg",
+        content: "Bộ phụ kiện chính hãng: Bộ ghế XFORCE, Bộ chắn bùn, Bộ điều khiển khởi động từ xa,..."
       }
     ],
     sections: [
-      {
-        title: "Ngoại thất Mitsubishi Xforce",
-        blocks: [
-          {
-            subtitle: "Đầu xe",
-            image: "/images/xforce-front.png",
-            desc: "Thiết kế Dynamic Shield mới, đèn LED chiếu sáng ban ngày, lưới tản nhiệt góc cạnh thể thao."
-          },
-          {
-            subtitle: "Thân xe",
-            image: "/images/xforce-side.png",
-            desc: "Mâm 18 inch, đường gân nổi sắc nét, thiết kế khí động học."
-          },
-          {
-            subtitle: "Đuôi xe",
-            image: "/images/xforce-rear.png",
-            desc: "Cụm đèn hậu LED tạo hình chữ T hiện đại, cánh gió thể thao."
-          },
-        ]
-      },
       {
         title: "Nội thất Mitsubishi Xforce",
         blocks: [
@@ -76,7 +98,7 @@ New Mitsubishi Xforce 2025 là mẫu SUV đô thị phong cách năng động, t
             subtitle: "",
             image: "/images/xforce-engine.png",
             desc: "Động cơ MIVEC 1.5L, hộp số CVT, 4 chế độ lái, tiết kiệm nhiên liệu tối ưu."
-          },
+          }
         ]
       },
       {
@@ -86,24 +108,26 @@ New Mitsubishi Xforce 2025 là mẫu SUV đô thị phong cách năng động, t
             subtitle: "",
             image: "/images/xforce-safety.png",
             desc: "Hệ thống kiểm soát lực kéo AYC, phanh ABS/EBD, cảnh báo điểm mù, cảnh báo phương tiện cắt ngang, 6 túi khí."
-          },
+          }
         ]
-      },
+      }
     ],
-    specsImage: "/images/xforce-specs.png",
+    specsImage: "/images/xforce-specs.jpg",
     gallery: [
       "/images/xforce-1.png",
       "/images/xforce-2.png",
-      "/images/xforce-3.png",
+      "/images/xforce-3.png"
     ]
   },
-  // ==== Các xe khác để nguyên như cũ, có thể bổ sung chi tiết tương tự nếu cần ====
+
+  // ==== Các xe khác để nguyên, có thể bổ sung exteriorSection nếu cần ====
   {
     slug: "all-new-xpander",
     name: "ALL NEW XPANDER",
     fuel: "6.9L/100Km",
     price: "560,000,000 ₫",
     image: "/images/xpander.png",
+    // Không có exteriorSection
   },
   {
     slug: "new-pajero-sport",
@@ -146,6 +170,6 @@ New Mitsubishi Xforce 2025 là mẫu SUV đô thị phong cách năng động, t
     fuel: "8.6L/100Km",
     price: "924,000,000 ₫",
     image: "/images/triton-athlete.png",
-  },
+  }
 ];
 export default carData;
