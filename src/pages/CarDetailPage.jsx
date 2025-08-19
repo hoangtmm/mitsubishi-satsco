@@ -1,41 +1,144 @@
 import { useParams } from "react-router-dom";
 import carData from "../assets/carData1";
+
 export default function CarDetailPage() {
   const { slug } = useParams();
-  const car = carData.find(x => x.slug === slug);
-  if (!car)
+  const car = carData.find((x) => x.slug === slug);
+
+  if (!car) {
     return (
       <div className="p-10 text-center text-2xl text-red-500">
         Không tìm thấy xe
       </div>
     );
+  }
+
+  // ===== Helper: render 1 section (ngoại thất / nội thất) theo cùng layout
+ const renderFeatureSection = (section) => {
+  if (!section) return null;
+  return (
+    <section className="container mx-auto my-8 bg-white rounded shadow overflow-hidden">
+      {/* Header */}
+      <div className="px-4 pt-3">
+        <span className="inline-block text-lg md:text-xl font-extrabold uppercase bg-[#E51A1A] text-white px-4 py-2 rounded-tl rounded-bl tracking-wide shadow border-l-4 border-[#E51A1A]">
+          {section.title}
+        </span>
+      </div>
+      <div className="border-b-[3px] border-[#E51A1A] mt-2" />
+
+      <div className="p-4 md:p-6">
+        {section.blocks?.map((block, idx) => (
+          <article key={idx} className="mb-8">
+            {block.subtitle ? (
+              <h3 className="text-base md:text-lg font-bold text-black mb-2">
+                {block.subtitle}
+              </h3>
+            ) : null}
+
+            {block.desc && (
+              <p className="text-[15px] md:text-base leading-7 text-[#333] mb-3">
+                {block.desc}
+              </p>
+            )}
+
+            {/* LIST (dạng gạch đầu dòng) */}
+            {Array.isArray(block.list) && block.list.length > 0 && (
+              <ul className="list-disc ml-6 text-gray-700 mb-3">
+                {block.list.map((it, i) => <li key={i}>{it}</li>)}
+              </ul>
+            )}
+
+            {/* TABLE (key/value) */}
+            {Array.isArray(block.table) && block.table.length > 0 && (
+              <table className="w-full text-sm border border-gray-200 mb-3">
+                <tbody>
+                  {block.table.map((row, i) => (
+                    <tr key={i} className={i % 2 ? "bg-white" : "bg-gray-50"}>
+                      <td className="p-2 font-semibold w-1/2 border-b border-gray-200">
+                        {row[0]}
+                      </td>
+                      <td className="p-2 border-b border-gray-200">{row[1]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+
+            {/* IMAGES */}
+            {Array.isArray(block.images) && block.images.length > 0 && (
+              block.layout === "grid-2" ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
+                  {block.images.map((img, i) => (
+                    <figure key={i}>
+                      <img src={img.src} alt={img.alt || ""} className="w-full h-auto rounded shadow-sm object-cover" />
+                    </figure>
+                  ))}
+                </div>
+              ) : (
+                block.images.map((img, i) => (
+                  <figure key={i} className="mb-4">
+                    <img src={img.src} alt={img.alt || ""} className="w-full h-auto rounded shadow-sm object-cover" />
+                    {img.caption && (
+                      <figcaption className="text-sm md:text-base text-[#555] mt-2">{img.caption}</figcaption>
+                    )}
+                  </figure>
+                ))
+              )
+            )}
+
+            {block.caption && (
+              <div className="text-sm md:text-base text-[#555] mt-1">{block.caption}</div>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+
+  // ===== Fallbacks an toàn
+  const bannerSrc = car.banner || car.image || "/images/placeholder.png";
+  const promoList = Array.isArray(car.promo) ? car.promo : car.promo ? [car.promo] : [];
+  const hasOverview = !!car.overview?.image;
+  const hasSpecs = !!car.specsImage;
+  const hasSections = Array.isArray(car.sections) && car.sections.length > 0;
+
   return (
     <main className="bg-[#fafbfc] min-h-screen font-sans pt-20">
       {/* Banner + Price box */}
       <section className="container mx-auto py-4 flex flex-col md:flex-row gap-4">
         <div className="md:w-2/3 bg-white rounded-lg shadow p-2 flex items-center justify-center">
-          <img src={car.banner} alt={car.name} className="max-w-full h-56 object-contain" />
+          <img src={bannerSrc} alt={car.name} className="max-w-full h-56 object-contain" />
         </div>
         <div className="md:w-1/3 bg-white rounded-lg shadow p-6 flex flex-col justify-between">
-          <h2 className="text-lg font-bold mb-2 text-center">KHUYẾN MÃI MITSUBISHI XFORCE</h2>
-          <ul className="list-disc pl-6 text-gray-700">
-            {Array.isArray(car.promo)
-              ? car.promo.map((item, idx) => <li key={idx}>{item}</li>)
-              : <li>{car.promo}</li>}
-          </ul>
-          <div className="text-xl font-bold text-red-600 text-center mb-3">Giá: {car.price}</div>
+          <h2 className="text-lg font-bold mb-2 text-center">KHUYẾN MÃI {car.name}</h2>
+
+          {promoList.length > 0 ? (
+            <ul className="list-disc pl-6 text-gray-700">
+              {promoList.map((item, idx) => <li key={idx}>{item}</li>)}
+            </ul>
+          ) : (
+            <div className="text-center text-gray-500">Liên hệ để biết ưu đãi</div>
+          )}
+
+          {car.price && (
+            <div className="text-xl font-bold text-red-600 text-center mb-3">
+              Giá: {car.price}
+            </div>
+          )}
           <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded font-bold mx-auto block">
             Đăng ký lái thử/Xem giá ưu đãi
           </button>
         </div>
       </section>
 
-      {/* GIÁ XE - bảng giống hình 1 */}
-      {car.priceTable && (
+      {/* GIÁ XE */}
+      {Array.isArray(car.priceTable) && car.priceTable.length > 0 && (
         <div className="bg-white rounded-lg p-4 shadow mb-8">
           <div className="flex items-center mb-3">
             <div className="text-xl font-extrabold uppercase text-[#E51A1A] bg-[#fff] px-4 py-2 border-l-8 border-[#E51A1A] rounded-l">
-              GIÁ XE MITSUBISHI XFORCE
+              GIÁ XE {car.name}
             </div>
             <div className="flex-1 border-b-2 border-[#E51A1A] ml-2"></div>
           </div>
@@ -60,121 +163,99 @@ export default function CarDetailPage() {
         </div>
       )}
 
-      {/* --- TỔNG QUAN MITSUBISHI XFORCE --- */}
-      <section className="container mx-auto my-8 bg-white rounded shadow px-0 py-2 overflow-hidden">
-        {/* Tiêu đề đỏ nền đỏ, border đỏ */}
-        <div className="flex items-center mb-4">
-          <span className="inline-block text-base font-bold uppercase bg-[#E51A1A] text-white px-3 py-1 rounded-tl rounded-bl tracking-wide shadow border-l-4 border-[#E51A1A]">
-            TỔNG QUAN MITSUBISHI XFORCE
-          </span>
-          <div className="flex-1 border-b-2 border-[#E51A1A]"></div>
-        </div>
+      {/* --- TỔNG QUAN (giống hình) --- */}
+      {car.overview?.image && (
+        <section className="container mx-auto my-8">
+          <div className="bg-white rounded shadow overflow-hidden">
+            {/* Header nền đỏ + gạch chân đỏ */}
+            <div className="px-4 pt-3">
+              <span className="inline-block text-lg md:text-xl font-extrabold uppercase bg-[#E51A1A] text-white px-4 py-2 rounded-tl rounded-bl tracking-wide shadow border-l-4 border-[#E51A1A]">
+                TỔNG QUAN {car.name}
+              </span>
+            </div>
+            <div className="border-b-[3px] border-[#E51A1A] mt-2" />
 
-        {/* Ảnh to */}
-        <div className="w-full flex justify-center bg-[#101d31]">
-          <img
-            src={car.overview.image}
-            alt="Cabin Mitsubishi Xforce"
-            className="rounded mb-3 max-w-full max-h-[340px] object-contain"
-            style={{ background: "#101d31" }}
-          />
-        </div>
+            <div className="p-4">
+              {/* Ảnh to nền đen */}
+              <div className="w-full bg-[#101d31] rounded overflow-hidden mb-4">
+                <img
+                  src={car.overview.image}
+                  alt={`${car.name} overview`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
 
-        {/* Tiêu đề xanh lớn */}
-        <h2 className="text-[20px] md:text-[22px] font-bold text-[#1045a7] mb-2 mt-2 px-4">
-          New Mitsubishi Xforce 2025
-        </h2>
+              {/* Tiêu đề xanh lớn */}
+              <h2 className="text-[22px] md:text-[26px] font-bold text-[#1045a7] mb-2">
+                New {car.name} 2025
+              </h2>
 
-        {/* Intro mô tả */}
-        <div className="text-gray-800 mb-2 text-[15px] leading-7 px-4">
-          Mitsubishi Xforce 2025 là mẫu SUV cỡ nhỏ thuộc dòng B-SUV tại Việt Nam. Mitsubishi Xforce được Mitsubishi Việt Nam ra mắt chính thức vào tháng 6/2024 và hiện đang là một mẫu mẫu cạnh cao cho dàn các hãng tại thị trường Việt Nam, được phân phối trực tiếp bởi Mitsubishi Tân Bình.
-        </div>
+              {/* Mô tả intro */}
+              <p className="text-[15px] md:text-base text-gray-800 leading-7 mb-4">
+                Mitsubishi Xforce 2025 là một mẫu xe SUV cỡ nhỏ thuộc dòng B‑SUV tại Việt Nam.
+                Mitsubishi Xforce được Mitsubishi Việt Nam ra mắt chính thức vào tháng 6/2024 và hiện
+                đang là một mẫu gầm cao cỡ nhỏ bán chạy tại thị trường Việt Nam, được phân phối trực
+                tiếp bởi Mitsubishi Tân Bình.
+              </p>
 
-        {/* Động cơ & Phiên bản */}
-        <div className="mb-2 px-4">
-          <div className="font-bold text-[16px] text-black mb-1">
-            Động cơ & Phiên bản Mitsubishi Xforce
+              {/* Động cơ & Phiên bản */}
+              <h3 className="text-[18px] font-bold text-black mb-2">
+                Động cơ &amp; Phiên bản Mitsubishi Xforce
+              </h3>
+              <p className="text-[15px] text-gray-800 mb-2">
+                Mitsubishi Xforce trang bị động cơ xăng 4 xy‑lanh 1.5L MIVEC, hộp số CVT, dẫn động cầu
+                trước, ngôn ngữ thiết kế Dynamic Shield, 5 chỗ ngồi, mâm hợp kim 18‑inch.
+              </p>
+              <ul className="list-disc ml-6 text-[15px] text-gray-800 space-y-1 mb-6">
+                <li className="text-[#1045a7] underline hover:no-underline">Mitsubishi Xforce Ultimate</li>
+                <li className="text-[#1045a7] underline hover:no-underline">Mitsubishi Xforce Premium</li>
+                <li className="text-[#1045a7] underline hover:no-underline">Mitsubishi Xforce Exceed</li>
+                <li className="text-[#1045a7] underline hover:no-underline">Mitsubishi Xforce GLX</li>
+              </ul>
+
+              {/* Thông số kỹ thuật */}
+              {car.specsImage && (
+                <>
+                  <h3 className="text-[18px] font-bold text-black mb-2">
+                    Thông số kỹ thuật {car.name}
+                  </h3>
+                  <div className="w-full overflow-auto mb-6">
+                    <img
+                      src={car.specsImage}
+                      alt={`Thông số kỹ thuật ${car.name}`}
+                      className="w-full max-w-3xl mx-auto rounded"
+                    />
+                  </div>
+                </>
+              )}
+
+              {/* Trang Thiết Bị */}
+              <h3 className="text-[18px] font-bold text-black mb-2">
+                Trang Thiết Bị {car.name}
+              </h3>
+              <div className="w-full overflow-auto">
+                <img
+                  src={car.equipment?.[0]?.image || "/images/xforce-accessory.jpg"}
+                  alt={`Trang thiết bị ${car.name}`}
+                  className="w-full max-w-3xl mx-auto rounded"
+                />
+              </div>
+            </div>
           </div>
-          <div className="text-[15px] text-gray-800 mb-1">
-            Mitsubishi Xforce được trang bị khối động cơ xăng 4 xy-lanh 1.5L MIVEC, CVT, Cầu trước, Ngôn ngữ thiết kế Dynamic Shield, 5 Chỗ, Mâm hợp kim 18-inch.
-          </div>
-          <ul className="list-disc ml-6 text-[15px] text-gray-800 mb-3">
-            <li>Mitsubishi Xforce Ultimate</li>
-            <li>Mitsubishi Xforce Premium</li>
-            <li>Mitsubishi Xforce Exceed</li>
-            <li>Mitsubishi Xforce GLX</li>
-          </ul>
-        </div>
-
-        {/* Thông số kỹ thuật */}
-        <div className="mb-4 px-4">
-          <div className="font-bold text-[16px] text-black mb-2">
-            Thông số kỹ thuật Mitsubishi Xforce
-          </div>
-          <div className="flex justify-center">
-            <img
-              src={car.specsImage}
-              alt="Thông số kỹ thuật Mitsubishi Xforce"
-              className="rounded max-w-full md:max-w-[600px] w-full"
-            />
-          </div>
-        </div>
-        {/* Trang Thiết Bị Mitsubishi Xforce */}
-        <div className="mb-2 px-4">
-          <div className="font-bold text-[16px] text-black mb-2">
-            Trang Thiết Bị Mitsubishi Xforce
-          </div>
-          <div className="flex justify-center">
-            <img
-              src={car.equipment?.[0]?.image || "/images/xforce-accessory.jpg"}
-              alt="Trang thiết bị Xforce"
-              className="rounded max-w-full md:max-w-[500px] w-full"
-            />
-          </div>
-        </div>
-      </section>
-{/* --- NGOẠI THẤT MITSUBISHI XFORCE, data-driven --- */}
-{car.exteriorSection && (
-  <section className="container mx-auto my-8 bg-white rounded shadow px-0 py-2 overflow-hidden">
-    {/* Tiêu đề nền đỏ */}
-    <div className="flex items-center mb-3">
-      <span className="inline-block text-lg md:text-xl font-bold uppercase bg-[#E51A1A] text-white px-4 py-2 rounded-tl rounded-bl tracking-wide shadow border-l-4 border-[#E51A1A]">
-        {car.exteriorSection.title}
-      </span>
-      <div className="flex-1 border-b-2 border-[#E51A1A]"></div>
-    </div>
-
-    {/* Duyệt các block ngoại thất */}
-    {car.exteriorSection.blocks.map((block, idx) => (
-      <div key={idx} className="mb-5">
-        {/* Sub-title và mô tả */}
-        {block.subtitle && (
-          <div className="px-4 mt-3 font-bold text-base text-black">{block.subtitle}</div>
-        )}
-        {block.desc && (
-          <div className="px-4 text-xs text-[#444] mb-3">{block.desc}</div>
-        )}
-        {/* Duyệt từng ảnh và caption nếu có */}
-        {block.images && block.images.map((img, i) => (
-          <div key={i} className="w-full p-0 mb-3">
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full rounded object-cover max-h-[420px] mx-auto"
-              style={{ background: "#eee" }}
-            />
-            {img.caption && (
-              <div className="px-4 text-xs text-[#555] mt-1">{img.caption}</div>
-            )}
-          </div>
-        ))}
-      </div>
-    ))}
-  </section>
-)}
+        </section>
+      )}
 
 
-      {/* --- Các section đặc trưng tiếp theo --- */}
+      {/* --- NGOẠI THẤT (data-driven) --- */}
+      {renderFeatureSection(car.exteriorSection)}
+
+      {/* --- NỘI THẤT (y chang ngoại thất) --- */}
+      {renderFeatureSection(car.interiorSection)}
+
+      {renderFeatureSection(car.performanceSection)}
+      {renderFeatureSection(car.safetySection)}
+      {renderFeatureSection(car.specsSection)}
+      {/* --- Các section đặc trưng tiếp theo (giữ nguyên) --- */}
       {car.equipment?.slice(1).map((eq, i) => (
         <section key={i} className="container mx-auto my-4 bg-white rounded shadow p-4">
           <div className="flex items-center mb-3">
@@ -188,31 +269,38 @@ export default function CarDetailPage() {
         </section>
       ))}
 
-      {/* Các section chi tiết */}
-      {car.sections.map((sec, i) => (
-        <section key={i} className="container mx-auto my-4 bg-white rounded shadow p-4">
-          <div className="flex items-center mb-3">
-            <div className="font-extrabold uppercase text-[#E51A1A] bg-[#fff] px-4 py-2 border-l-8 border-[#E51A1A] rounded-l text-base">
-              {sec.title}
+      {/* Các section chi tiết cũ (nếu còn dùng) */}
+      {hasSections &&
+        car.sections.map((sec, i) => (
+          <section key={i} className="container mx-auto my-4 bg-white rounded shadow p-4">
+            <div className="flex items-center mb-3">
+              <div className="font-extrabold uppercase text-[#E51A1A] bg-[#fff] px-4 py-2 border-l-8 border-[#E51A1A] rounded-l text-base">
+                {sec.title}
+              </div>
+              <div className="flex-1 border-b-2 border-[#E51A1A] ml-2"></div>
             </div>
-            <div className="flex-1 border-b-2 border-[#E51A1A] ml-2"></div>
-          </div>
-          {sec.blocks.map((block, j) => (
-            <div key={j} className="mb-5">
-              {block.subtitle && <div className="font-semibold mb-1">{block.subtitle}</div>}
-              <img src={block.image} alt="" className="w-full max-w-2xl mx-auto mb-2 rounded" />
-              <p className="text-gray-800">{block.desc}</p>
-            </div>
-          ))}
-        </section>
-      ))}
+            {sec.blocks?.map((block, j) => (
+              <div key={j} className="mb-5">
+                {block.subtitle && <div className="font-semibold mb-1">{block.subtitle}</div>}
+                {block.image && (
+                  <img
+                    src={block.image}
+                    alt=""
+                    className="w-full max-w-2xl mx-auto mb-2 rounded"
+                  />
+                )}
+                {block.desc && <p className="text-gray-800">{block.desc}</p>}
+              </div>
+            ))}
+          </section>
+        ))}
 
       {/* Bộ sưu tập hình ảnh cuối */}
-      {car.gallery && (
+      {Array.isArray(car.gallery) && car.gallery.length > 0 && (
         <section className="container mx-auto my-4 bg-white rounded shadow p-4">
           <div className="flex items-center mb-3">
             <div className="font-extrabold uppercase text-[#E51A1A] bg-[#fff] px-4 py-2 border-l-8 border-[#E51A1A] rounded-l text-base">
-              Hình ảnh Mitsubishi Xforce
+              Hình ảnh {car.name}
             </div>
             <div className="flex-1 border-b-2 border-[#E51A1A] ml-2"></div>
           </div>

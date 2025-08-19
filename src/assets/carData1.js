@@ -59,9 +59,61 @@ Các phiên bản:
             { src: "/images/xforce-front-detail1.jpg", alt: "Đèn chiếu sáng Mitsubishi Xforce", caption: "Cụm đèn chiếu sáng Mitsubishi Xforce 2024 dạng T-shape kết cấu phân tầng kết hợp với dải LED ban ngày hình chữ L" },
             { src: "/images/xforce-front-detail2.jpg", alt: "Cản trước Mitsubishi Xforce", caption: "Nằm liền kề là cụm đèn chiếu sáng dạng T-shape kết cấu phân tầng. ... Bọc bên ngoài cụm đèn là miếng ốp nhôm to bản mang đến nét thể thao, vững chãi cho xe." }
           ]
+        },
+        {
+          subtitle: "Thân xe",
+          desc: "Nhìn từ bên hông, thân xe Mitsubishi Xforce 2024 có form dáng cân đối, các đường gân dập nổi chạy dọc thân mang phong cách năng động, thể thao. Ốp viền hốc bánh và ốp sườn màu đen tăng vẻ khỏe khoắn. Gương chiếu hậu gập/chỉnh điện tích hợp báo rẽ. Mâm hợp kim 18 inch thiết kế mạnh mẽ.",
+          images: [
+            { src: "/images/xforce-front1.jpg", alt: "Thân xe Mitsubishi Xforce" }, // ảnh lớn như hình bạn gửi
+            { src: "/images/xforce-side-detail1.jpg", alt: "Viền hốc bánh và ốp sườn", caption: "Ốp nhựa đen quanh vè bánh và sườn xe tạo cảm giác vững chãi, chống bám bẩn tốt." },
+          ]
+        },
+        {
+          subtitle: "Đuôi xe",
+          desc:
+            "Đuôi xe Mitsubishi Xforce 2024 mang phong cách quen thuộc. Thiết kế cụm đèn hậu cách điệu dạng T‑shape tương tự như mặt trước. Cản sau dùng ốp nhựa đen nhám tạo hình khỏe khoắn, tổng thể cho cảm giác cứng cáp và bề thế.",
+          images: [
+            { src: "/images/xforce-rear.jpg", alt: "Đuôi xe Mitsubishi Xforce" },
+
+          ]
         }
       ]
     },
+        // ----- Phần nội thất data-driven (chỉ riêng Xforce mới có) -----
+    interiorSection: {
+      title: "NỘI THẤT MITSUBISHI XFORCE",
+      blocks: [
+        {
+          subtitle: "",
+          desc: "Thiết kế bên trong Mitsubishi Xforce 2025 mở rộng theo phương ngang, giúp tăng tầm quan sát phía trước. Trang bị tiện nghi, bố trí khoa học; các chi tiết được chăm chút tỉ mỉ tạo cảm giác khá sang trọng. Đặc biệt Xforce là mẫu xe đầu tiên sử dụng chất liệu vải mélange trang trí mặt táp-lô và tappi cửa.",
+          images: [
+            { src: "/images/xforce-interior-dash.jpg", alt: "Nội thất tổng quan Xforce" }
+          ]
+        },
+        {
+          subtitle: "Ghế ngồi và khoang hành lý",
+          desc: "Mitsubishi Xforce 2024 có cấu hình 5 chỗ, trục cơ sở 2.650 mm cho không gian rộng rãi ở cả hai hàng ghế. Ghế bọc da pha nỉ phối màu trẻ trung, ghế trước ôm thân người có chỉnh lưng; hàng ghế sau có bệ tỳ tay, tựa lưng phẳng, lưng ghế điều chỉnh 8 cấp độ. Khoang hành lý gập linh hoạt 40/20/40.",
+          images: [
+            { src: "/images/xforce-seats.jpg", alt: "Hàng ghế Xforce" }
+          ]
+        },
+        {
+          subtitle: "Khu vực lái",
+          desc: "Vô lăng 3 chấu bọc da vát đáy D-cut, tích hợp phím chức năng. Cụm đồng hồ 8 inch kỹ thuật số, khởi động nút bấm, cần số điện tử. Bảng đồng hồ hiển thị đầy đủ thông tin, giao diện trực quan.",
+          images: [
+            { src: "/images/xforce-driver.jpg", alt: "Khoang lái Xforce" }
+          ]
+        },
+        {
+          subtitle: "Tiện nghi",
+          desc: "Màn hình trung tâm 12.3 inch nối liền cụm đồng hồ. Hệ thống âm thanh Dynamic Sound Yamaha Premium với loa cao cấp, tự động điều chỉnh chất lượng âm thanh theo tốc độ và mặt đường.",
+          images: [
+            { src: "/images/xforce-yamaha-1.jpg", alt: "Loa Yamaha cột A" },
+          ]
+        }
+      ]
+    },
+
     versions: [
       "Xforce Ultimate",
       "Xforce Premium",
@@ -75,49 +127,77 @@ Các phiên bản:
         content: "Bộ phụ kiện chính hãng: Bộ ghế XFORCE, Bộ chắn bùn, Bộ điều khiển khởi động từ xa,..."
       }
     ],
-    sections: [
-      {
-        title: "Nội thất Mitsubishi Xforce",
-        blocks: [
-          {
-            subtitle: "Khoang lái",
-            image: "/images/xforce-cabin.png",
-            desc: "Không gian rộng rãi, màn hình kép 12.3 inch, vật liệu da cao cấp, hệ thống giải trí Yamaha."
-          },
-          {
-            subtitle: "Khoang hành khách",
-            image: "/images/xforce-row2.png",
-            desc: "Hàng ghế sau rộng, cửa gió riêng biệt, độ ngả ghế lớn nhất phân khúc."
-          }
-        ]
-      },
-      {
-        title: "Vận hành Mitsubishi Xforce",
-        blocks: [
-          {
-            subtitle: "",
-            image: "/images/xforce-engine.png",
-            desc: "Động cơ MIVEC 1.5L, hộp số CVT, 4 chế độ lái, tiết kiệm nhiên liệu tối ưu."
-          }
-        ]
-      },
-      {
-        title: "An toàn Mitsubishi Xforce",
-        blocks: [
-          {
-            subtitle: "",
-            image: "/images/xforce-safety.png",
-            desc: "Hệ thống kiểm soát lực kéo AYC, phanh ABS/EBD, cảnh báo điểm mù, cảnh báo phương tiện cắt ngang, 6 túi khí."
-          }
-        ]
-      }
-    ],
-    specsImage: "/images/xforce-specs.jpg",
-    gallery: [
-      "/images/xforce-1.png",
-      "/images/xforce-2.png",
-      "/images/xforce-3.png"
-    ]
+   
+      // ----- Phần vận hành (data-driven) -----
+    performanceSection: {
+      title: "VẬN HÀNH MITSUBISHI XFORCE",
+      blocks: [
+        {
+          subtitle: "Động cơ & Hệ truyền động",
+          desc: "Mitsubishi Xforce 2025 sử dụng động cơ MIVEC 1.5L cho công suất tối đa 105 mã lực, mô men xoắn cực đại 141Nm. Hộp số tự động vô cấp CVT, hệ dẫn động cầu trước.",
+          images: [
+            { src: "/images/xforce-engine.jpg", alt: "Động cơ Mitsubishi Xforce" }
+          ]
+        },
+        {
+          subtitle: "Thông số vận hành",
+          table: [
+            ["Động cơ", "1.5 MIVEC"],
+            ["Công suất cực đại", "105/6.000"],
+            ["Mô men xoắn cực đại", "141/4.000"],
+            ["Hộp số", "CVT"],
+            ["Dẫn động", "Cầu trước"],
+            ["Hệ thống treo", "MacPherson / Dầm xoắn"],
+            ["Phanh", "Đĩa"]
+          ]
+        }
+      ]
+    },
+
+    // ----- Phần an toàn -----
+    safetySection: {
+      title: "AN TOÀN MITSUBISHI XFORCE",
+      blocks: [
+        {
+          subtitle: "Trang bị an toàn",
+          desc: "Hệ thống an toàn trên Mitsubishi Xforce được đánh giá khá tốt. Xe có đầy đủ các tính năng tiên tiến như kiểm soát hành trình thích ứng, cảnh báo điểm mù, cảnh báo phương tiện cắt ngang phía sau, cảnh báo và giảm thiểu va chạm trước, đèn pha tự động, hỗ trợ chuyển làn…",
+          images: [
+            { src: "/images/xforce-safety.png", alt: "An toàn Mitsubishi Xforce" }
+          ],
+          list: [
+            "6 túi khí",
+            "Phanh ABS, EBD, BA",
+            "Cảnh báo điểm mù",
+            "Kiểm soát hành trình thích ứng",
+            "Cảnh báo va chạm trước / sau",
+            "Hỗ trợ khởi hành ngang dốc",
+            "Kiểm soát lực kéo"
+          ]
+        }
+      ]
+    },
+
+    // ----- Phần thông số kỹ thuật -----
+    specsSection: {
+      title: "THÔNG SỐ KỸ THUẬT MITSUBISHI XFORCE",
+      blocks: [
+        {
+          subtitle: "",
+          list: [
+            "Kích thước: 4.390 x 1.810 x 1.660 mm",
+            "Chiều dài cơ sở: 2.650 mm",
+            "Hộp số tự động vô cấp CVT",
+            "Đèn chiếu sáng LED T-Shape",
+            "Phanh tay điện tử & Auto Hold",
+            "Cửa sổ trời toàn cảnh",
+            "USB-A & USB-C cho cả 2 hàng ghế",
+            "Màn hình cảm ứng 12.3 inch hỗ trợ Android Auto & Apple CarPlay",
+            "Âm thanh 8 loa Dynamic Sound Yamaha"
+          ]
+        }
+      ]
+    },
+
   },
 
   // ==== Các xe khác để nguyên, có thể bổ sung exteriorSection nếu cần ====
