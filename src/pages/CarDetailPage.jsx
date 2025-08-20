@@ -14,87 +14,136 @@ export default function CarDetailPage() {
   }
 
   // ===== Helper: render 1 section (ngoại thất / nội thất) theo cùng layout
- const renderFeatureSection = (section) => {
-  if (!section) return null;
-  return (
-    <section className="container mx-auto my-8 bg-white rounded shadow overflow-hidden">
-      {/* Header */}
-      <div className="px-4 pt-3">
-        <span className="inline-block text-lg md:text-xl font-extrabold uppercase bg-[#E51A1A] text-white px-4 py-2 rounded-tl rounded-bl tracking-wide shadow border-l-4 border-[#E51A1A]">
-          {section.title}
-        </span>
-      </div>
-      <div className="border-b-[3px] border-[#E51A1A] mt-2" />
+  const renderFeatureSection = (section) => {
+    if (!section) return null;
 
-      <div className="p-4 md:p-6">
-        {section.blocks?.map((block, idx) => (
-          <article key={idx} className="mb-8">
-            {block.subtitle ? (
-              <h3 className="text-base md:text-lg font-bold text-black mb-2">
-                {block.subtitle}
-              </h3>
-            ) : null}
+    return (
+      <section className="container mx-auto my-8 bg-white rounded shadow overflow-hidden">
+        {/* Header */}
+        <div className="px-4 pt-3">
+          <span className="inline-block text-lg md:text-xl font-extrabold uppercase bg-[#E51A1A] text-white px-4 py-2 rounded-tl rounded-bl tracking-wide shadow border-l-4 border-[#E51A1A]">
+            {section.title}
+          </span>
+        </div>
+        <div className="border-b-[3px] border-[#E51A1A] mt-2" />
 
-            {block.desc && (
-              <p className="text-[15px] md:text-base leading-7 text-[#333] mb-3">
-                {block.desc}
-              </p>
-            )}
+        <div className="p-4 md:p-6">
+          {section.blocks?.map((block, idx) => (
+            <article key={idx} className="mb-8">
+              {/* Sub-title */}
+              {block.subtitle ? (
+                <h3 className="text-base md:text-lg font-bold text-black mb-2">
+                  {block.subtitle}
+                </h3>
+              ) : null}
 
-            {/* LIST (dạng gạch đầu dòng) */}
-            {Array.isArray(block.list) && block.list.length > 0 && (
-              <ul className="list-disc ml-6 text-gray-700 mb-3">
-                {block.list.map((it, i) => <li key={i}>{it}</li>)}
-              </ul>
-            )}
+              {/* Mô tả thuần văn bản */}
+              {block.desc && (
+                <p className="text-[15px] md:text-base leading-7 text-[#333] mb-3">
+                  {block.desc}
+                </p>
+              )}
 
-            {/* TABLE (key/value) */}
-            {Array.isArray(block.table) && block.table.length > 0 && (
-              <table className="w-full text-sm border border-gray-200 mb-3">
-                <tbody>
-                  {block.table.map((row, i) => (
-                    <tr key={i} className={i % 2 ? "bg-white" : "bg-gray-50"}>
-                      <td className="p-2 font-semibold w-1/2 border-b border-gray-200">
-                        {row[0]}
-                      </td>
-                      <td className="p-2 border-b border-gray-200">{row[1]}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
+              {/* Mô tả dùng HTML */}
+              {block.html && (
+                <div
+                  className="text-[15px] md:text-base leading-7 text-[#333] mb-3"
+                  dangerouslySetInnerHTML={{ __html: block.html }}
+                />
+              )}
 
-            {/* IMAGES */}
-            {Array.isArray(block.images) && block.images.length > 0 && (
-              block.layout === "grid-2" ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
-                  {block.images.map((img, i) => (
-                    <figure key={i}>
-                      <img src={img.src} alt={img.alt || ""} className="w-full h-auto rounded shadow-sm object-cover" />
-                    </figure>
-                  ))}
+              {/* Video YouTube */}
+              {block.videoId && (
+                <div className="aspect-video w-full mb-4">
+                  <iframe
+                    className="w-full h-full rounded"
+                    src={`https://www.youtube.com/embed/${block.videoId}`}
+                    title={block.videoTitle || block.subtitle || section.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
                 </div>
-              ) : (
-                block.images.map((img, i) => (
-                  <figure key={i} className="mb-4">
-                    <img src={img.src} alt={img.alt || ""} className="w-full h-auto rounded shadow-sm object-cover" />
-                    {img.caption && (
-                      <figcaption className="text-sm md:text-base text-[#555] mt-2">{img.caption}</figcaption>
-                    )}
-                  </figure>
-                ))
-              )
-            )}
+              )}
 
-            {block.caption && (
-              <div className="text-sm md:text-base text-[#555] mt-1">{block.caption}</div>
-            )}
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-};
+              {/* LIST (dạng gạch đầu dòng) */}
+              {Array.isArray(block.list) && block.list.length > 0 && (
+                <ul className="list-disc ml-6 text-gray-700 mb-3">
+                  {block.list.map((it, i) => (
+                    <li key={i}>{it}</li>
+                  ))}
+                </ul>
+              )}
+
+              {/* TABLE (key/value) - mảng [label, value] */}
+              {Array.isArray(block.table) && block.table.length > 0 && (
+                <table className="w-full text-sm border border-gray-200 mb-3">
+                  <tbody>
+                    {block.table.map((row, i) => (
+                      <tr key={i} className={i % 2 ? "bg-white" : "bg-gray-50"}>
+                        <td className="p-2 font-semibold w-1/2 border-b border-gray-200">
+                          {Array.isArray(row) ? row[0] : ""}
+                        </td>
+                        <td className="p-2 border-b border-gray-200">
+                          {Array.isArray(row) ? row[1] : ""}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
+
+              {/* IMAGES */}
+              {Array.isArray(block.images) && block.images.length > 0 && (
+                block.layout === "grid-2" ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
+                    {block.images.map((img, i) => (
+                      <figure key={i} className="flex flex-col items-center text-center">
+                        <img
+                          src={img.src}
+                          alt={img.alt || ""}
+                          className="w-full h-auto rounded shadow-sm object-cover mx-auto"
+                        />
+                        {img.caption && (
+                          <figcaption className="text-sm md:text-base text-[#555] mt-2 italic text-center">
+                            {img.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    ))}
+                  </div>
+                ) : (
+                  block.images.map((img, i) => (
+                    <figure key={i} className="mb-4 flex flex-col items-center text-center">
+                      <img
+                        src={img.src}
+                        alt={img.alt || ""}
+                        className="w-full h-auto rounded shadow-sm object-cover mx-auto"
+                      />
+                      {img.caption && (
+                        <figcaption className="text-sm md:text-base text-[#555] mt-2 italic text-center">
+                          {img.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ))
+                )
+              )}
+
+              {/* Chú thích toàn block nếu cần */}
+              {block.caption && (
+                <div className="text-sm md:text-base text-[#555] mt-1 italic text-center">
+                  {block.caption}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+  };
+
+
 
 
   // ===== Fallbacks an toàn
@@ -245,16 +294,27 @@ export default function CarDetailPage() {
         </section>
       )}
 
+    {/* --- TỔNG QUAN --- */}
+{renderFeatureSection(car.overviewSection)}
 
-      {/* --- NGOẠI THẤT (data-driven) --- */}
-      {renderFeatureSection(car.exteriorSection)}
+{/* --- NGOẠI THẤT --- */}
+{renderFeatureSection(car.exteriorSection)}
 
-      {/* --- NỘI THẤT (y chang ngoại thất) --- */}
-      {renderFeatureSection(car.interiorSection)}
+{/* --- NỘI THẤT --- */}
+{renderFeatureSection(car.interiorSection)}
 
-      {renderFeatureSection(car.performanceSection)}
-      {renderFeatureSection(car.safetySection)}
-      {renderFeatureSection(car.specsSection)}
+{/* --- VẬN HÀNH --- */}
+{renderFeatureSection(car.performanceSection)}
+
+{/* --- AN TOÀN --- */}
+{renderFeatureSection(car.safetySection)}
+
+{/* --- THÔNG SỐ --- */}
+{renderFeatureSection(car.specsSection)}
+
+{/* --- HÌNH ẢNH --- */}
+{renderFeatureSection(car.gallerySection)}
+
       {/* --- Các section đặc trưng tiếp theo (giữ nguyên) --- */}
       {car.equipment?.slice(1).map((eq, i) => (
         <section key={i} className="container mx-auto my-4 bg-white rounded shadow p-4">
