@@ -207,11 +207,11 @@ Các phiên bản:
     fuel: "6.9L/100Km",
     price: "560,000,000 ₫",
     image: "/images/xpander.png",
-      priceTable: [
-    { version: "NEW XPANDER MT",        price: "560 triệu đ" },
-    { version: "NEW XPANDER AT",        price: "598 triệu đ" },
-    { version: "NEW XPANDER AT Premium",price: "658 triệu đ" }
-  ],
+    priceTable: [
+      { version: "NEW XPANDER MT", price: "560 triệu đ" },
+      { version: "NEW XPANDER AT", price: "598 triệu đ" },
+      { version: "NEW XPANDER AT Premium", price: "658 triệu đ" }
+    ],
     // === TỔNG QUAN XPANDER 2025 ===
     overviewSection: {
       title: "TỔNG QUAN MITSUBISHI XPANDER 2025",
@@ -279,138 +279,379 @@ Các phiên bản:
         }
       ]
     },
-// ----- NỘI THẤT XPANDER 2025 -----
-interiorSection: {
-  title: "NỘI THẤT MITSUBISHI XPANDER 2025",
-  blocks: [
-    {
-      html: `
+    // ----- NỘI THẤT XPANDER 2025 -----
+    interiorSection: {
+      title: "NỘI THẤT MITSUBISHI XPANDER 2025",
+      blocks: [
+        {
+          html: `
         <p>Xpander chinh phục khách hàng với khoang nội thất hoàn toàn mới và rộng rãi hàng đầu phân khúc, sang trọng đi cùng tính ứng dụng cao. Dựa trên triết lý “Omotenashi” – biểu trưng cho nghệ thuật chăm sóc khách hàng của người Nhật, Xpander hướng đến đáp ứng trọn vẹn những nhu cầu thiết thực từ khách hàng.</p>
       `,
-      images: [
-        { src: "/images/xp-interior-dashboard.jpg", alt: "Khoang lái Xpander 2025" }
-      ]
-    },
-    {
-      html: `
+          images: [
+            { src: "/images/xp-interior-dashboard.jpg", alt: "Khoang lái Xpander 2025" }
+          ]
+        },
+        {
+          html: `
         <p>Nội thất Mitsubishi Xpander 2024* hoàn toàn mới theo triết lý thiết kế “Horizontal Axis” – nhận diện mới nhất của Mitsubishi cho thế hệ sản phẩm tương lai với bề mặt táp-lô, bảng điều khiển trung tâm trải rộng theo phương ngang. Sự kết hợp hài hòa giữa Horizontal Axis và chất liệu cao cấp tạo nên không gian nội thất xe rộng rãi, sang trọng vượt trội, mang lại sự thoải mái cho cả gia đình.</p>
       `,
-      images: [
-        { src: "/images/xp-interior-cabin.jpg", alt: "Không gian cabin 3 hàng ghế Xpander 2025" }
-      ]
-    },
-    {
-      html: `
+          images: [
+            { src: "/images/xp-interior-cabin.jpg", alt: "Không gian cabin 3 hàng ghế Xpander 2025" }
+          ]
+        },
+        {
+          html: `
         <p>Nội thất Xpander 2024 gồm 2 tông màu đen – nâu sang trọng (AT Premium) và đen – xanh navy thể thao (Xpander Cross). Không chỉ thiết kế tinh tế và đẹp mắt, vật liệu da mềm cùng với đường chỉ may thật trang trí cho những vị trí như ốp cửa, tựa tay trên cửa hay bệ tỳ tay ghế lái tạo điểm nhấn cao cấp cho xe. Các chi tiết của bảng điều khiển cũng được trau chuốt để tạo nên sự tinh tế thống nhất.</p>
       `
-    },
-    {
-      images: [
-        { src: "/images/xp-interior-ac-panel.jpg", alt: "Cụm điều hòa và chức năng Max Cool" }
-      ],
-      html: `
+        },
+        {
+          images: [
+            { src: "/images/xp-interior-ac-panel.jpg", alt: "Cụm điều hòa và chức năng Max Cool" }
+          ],
+          html: `
         <p>Chức năng Max Cool lần đầu tiên xuất hiện trên cụm điều khiển điều hòa kỹ thuật số được thiết kế mới, tinh xảo và dễ thao tác hơn trên Xpander 2024. Khi bật chế độ Max Cool, điều hòa xe ngay lập tức chuyển sang chế độ mức gió lớn nhất và nhiệt độ thấp nhất để làm mát không gian nội thất thật nhanh chóng. Cụm điều hòa hàng ghế sau cũng được chỉnh với nút điều khiển màu bạc sang trọng và các cạnh hướng gió sơn màu mới, đẹp mắt hơn.</p>
         <p>Phanh tay điện tử tự động (EPB) và chức năng Giữ phanh tạm thời (Auto Hold) lần đầu tiên xuất hiện trên Xpander 2024 tạo nên không gian thuận tiện, sang trọng, gọn gàng và an toàn hơn khi lái xe.</p>
       `
-    },
-    {
-      images: [
-        { src: "/images/xp-interior-epb.jpg", alt: "Cụm EPB & Auto Hold Xpander 2025" }
-      ],
-      html: `
+        },
+        {
+          images: [
+            { src: "/images/xp-interior-epb.jpg", alt: "Cụm EPB & Auto Hold Xpander 2025" }
+          ],
+          html: `
         <p>Tiện nghi cho mọi vị trí ngồi trên xe cũng được chú trọng. Tựa tay của hàng ghế sau được bổ sung thêm hộc để cốc tiện dụng. Hàng ghế trước trang bị bệ tì tay tích hợp ngăn chứa khăn giấy và có thể chứa được 4 chai nước 600 ml, phía sau là 2 cổng USB bao gồm 1 cổng USB Type-C và 1 cổng USB Type-A tương thích sạc cho tất cả các thiết bị điện tử di động hiện đại.</p>
         <p>7 chỗ ngồi với 7 chế độ sắp xếp ghế khác nhau theo từng cách gập của hàng ghế thứ 2 và hàng ghế thứ 3. Nội thất rộng rãi của Mitsubishi Xpander có thể thay đổi không gian linh hoạt đáp ứng tối đa sự thoải mái khi di chuyển của gia đình.</p>
       `
-    },
-    {
-      images: [
-        { src: "/images/xp-interior-screen.jpg", alt: "Màn hình trung tâm hỗ trợ Apple CarPlay/Android Auto" }
-      ],
-      html: `
+        },
+        {
+          images: [
+            { src: "/images/xp-interior-screen.jpg", alt: "Màn hình trung tâm hỗ trợ Apple CarPlay/Android Auto" }
+          ],
+          html: `
         <p>Màn hình giải trí cảm ứng 9-inch cho chất lượng hiển thị cao cấp, âm thanh vượt trội có khả năng kết nối Apple CarPlay/Android Auto, Bluetooth 5.0, USB, cùng tính năng điều khiển bằng cử chỉ mang lại những trải nghiệm công nghệ thú vị tới người dùng.</p>
         <p>Mặt đồng hồ tốc độ và đồ hoạ hiển thị xe khi khởi động cũng được tái thiết kế theo phong cách hiện đại, tinh tế hơn so với thế hệ trước.</p>
       `
-    }
-  ]
-},
-// Thêm vào object "all-new-xpander"
-performanceSection: {
-  title: "VẬN HÀNH MITSUBISHI XPANDER 2025",
-  blocks: [
-    {
-      subtitle: "",
-      desc:
-        "Vô lăng 3 chấu được thiết kế mới đem lại cảm giác cầm nắm tự tin hơn, hỗ trợ đánh lái chính xác trong đô thị và đường dài. Hệ thống treo được cải tiến giúp điều khiển và vận hành êm ái trên nhiều mặt đường: kích thước phuộc, van bên trong phuộc, lò xo phuộc trước và phuộc sau đều được tinh chỉnh để tăng cứng vững của thân xe. Xpander 2025 vẫn đảm bảo sự yên tĩnh bên trong khoang lái nhờ tối ưu vật liệu cách âm và hấp thụ tiếng ồn.",
-      images: [
-        { src: "/images/xp-perf-suspension.jpg", alt: "Hệ thống treo Xpander 2025" }
+        }
       ]
     },
-    {
-      desc:
-        "Khoảng sáng gầm của Xpander đạt 225 mm, giúp tự tin vượt qua ổ gà, đường ngập nước nhẹ và các gờ giảm tốc. Khả năng lội nước đến khoảng 400 mm và góc tiếp cận/thoát tốt giúp chiếc MPV vận hành linh hoạt, êm ái trong nhiều điều kiện thực tế.",
+    // Thêm vào object "all-new-xpander"
+    performanceSection: {
+      title: "VẬN HÀNH MITSUBISHI XPANDER 2025",
+      blocks: [
+        {
+          subtitle: "",
+          desc:
+            "Vô lăng 3 chấu được thiết kế mới đem lại cảm giác cầm nắm tự tin hơn, hỗ trợ đánh lái chính xác trong đô thị và đường dài. Hệ thống treo được cải tiến giúp điều khiển và vận hành êm ái trên nhiều mặt đường: kích thước phuộc, van bên trong phuộc, lò xo phuộc trước và phuộc sau đều được tinh chỉnh để tăng cứng vững của thân xe. Xpander 2025 vẫn đảm bảo sự yên tĩnh bên trong khoang lái nhờ tối ưu vật liệu cách âm và hấp thụ tiếng ồn.",
+          images: [
+            { src: "/images/xp-perf-suspension.jpg", alt: "Hệ thống treo Xpander 2025" }
+          ]
+        },
+        {
+          desc:
+            "Khoảng sáng gầm của Xpander đạt 225 mm, giúp tự tin vượt qua ổ gà, đường ngập nước nhẹ và các gờ giảm tốc. Khả năng lội nước đến khoảng 400 mm và góc tiếp cận/thoát tốt giúp chiếc MPV vận hành linh hoạt, êm ái trong nhiều điều kiện thực tế.",
+        },
+        {
+          subtitle: "",
+          desc:
+            "Khung xe RISE sử dụng thép cường lực độ bền cao giúp thân xe vững chắc, giảm biến dạng khi va chạm, đồng thời nâng cao độ ổn định khi vào cua và ở tốc độ cao.",
+          images: [
+            { src: "/images/xp-perf-rise.jpg", alt: "Khung gầm RISE tăng độ vững chắc" }
+          ]
+        }
+      ]
     },
-    {
-      subtitle: "",
-      desc:
-        "Khung xe RISE sử dụng thép cường lực độ bền cao giúp thân xe vững chắc, giảm biến dạng khi va chạm, đồng thời nâng cao độ ổn định khi vào cua và ở tốc độ cao.",
-      images: [
-        { src: "/images/xp-perf-rise.jpg", alt: "Khung gầm RISE tăng độ vững chắc" }
+    // --- AN TOÀN ---
+    safetySection: {
+      title: "AN TOÀN MITSUBISHI XPANDER 2025",
+      blocks: [
+        {
+          list: [
+            "Hệ thống phanh an toàn (ABS – EBD): chống bó cứng phanh & phân phối lực phanh điện tử.",
+            "Hỗ trợ phanh khẩn cấp (BA).",
+            "Cân bằng điện tử (ASC) giúp giảm hiện tượng mất lái.",
+            "Kiểm soát lực kéo (TCL).",
+            "Hỗ trợ khởi hành ngang dốc (HSA).",
+            "Cảnh báo phanh khẩn cấp (ESS).",
+            "Camera lùi: quan sát & lưu xe an toàn hơn."
+          ],
+        }
       ]
-    }
-  ]
-},
-// --- AN TOÀN ---
-safetySection: {
-  title: "AN TOÀN MITSUBISHI XPANDER 2025",
-  blocks: [
-    {
-      list: [
-        "Hệ thống phanh an toàn (ABS – EBD): chống bó cứng phanh & phân phối lực phanh điện tử.",
-        "Hỗ trợ phanh khẩn cấp (BA).",
-        "Cân bằng điện tử (ASC) giúp giảm hiện tượng mất lái.",
-        "Kiểm soát lực kéo (TCL).",
-        "Hỗ trợ khởi hành ngang dốc (HSA).",
-        "Cảnh báo phanh khẩn cấp (ESS).",
-        "Camera lùi: quan sát & lưu xe an toàn hơn."
-      ],
-    }
-  ]
-},
+    },
 
-// --- THÔNG SỐ ---
-specsSection: {
-  title: "THÔNG SỐ MITSUBISHI XPANDER 2025",
-  blocks: [
-    {
-      table: [
-        ["Kích thước DxRxC", "4475 x 1750 x 1700 mm"],
-        ["Chiều dài cơ sở", "2775 mm"],
-        ["Khoảng sáng gầm", "205 mm"],
-        ["Động cơ", "Xăng 1.5L MIVEC"],
-        ["Dung tích", "1499 cc"],
-        ["Công suất/Mô-men xoắn", "≈102 mã lực / 141 Nm"],
-        ["Hộp số", "Số sàn 5 cấp (MT) / Tự động 4 cấp (AT)"],
-        ["Dẫn động", "Cầu trước"],
-        ["Lốp xe", "205/55R16"],
-        ["Bình xăng", "45 L"],
-        ["Số chỗ ngồi", "07"]
+    // --- THÔNG SỐ ---
+    specsSection: {
+      title: "THÔNG SỐ MITSUBISHI XPANDER 2025",
+      blocks: [
+        {
+          table: [
+            ["Kích thước DxRxC", "4475 x 1750 x 1700 mm"],
+            ["Chiều dài cơ sở", "2775 mm"],
+            ["Khoảng sáng gầm", "205 mm"],
+            ["Động cơ", "Xăng 1.5L MIVEC"],
+            ["Dung tích", "1499 cc"],
+            ["Công suất/Mô-men xoắn", "≈102 mã lực / 141 Nm"],
+            ["Hộp số", "Số sàn 5 cấp (MT) / Tự động 4 cấp (AT)"],
+            ["Dẫn động", "Cầu trước"],
+            ["Lốp xe", "205/55R16"],
+            ["Bình xăng", "45 L"],
+            ["Số chỗ ngồi", "07"]
+          ]
+        }
       ]
-    }
-  ]
-},
+    },
 
-// --- HÌNH ẢNH (carousel) ---
-  images: [
-        { src: "/images/xp-interior-dashboard.jpg", alt: "Khoang lái Xpander 2025" }
-      ]
+    // --- HÌNH ẢNH (carousel) ---
+    images: [
+      { src: "/images/xp-interior-dashboard.jpg", alt: "Khoang lái Xpander 2025" }
+    ]
 
   },
   {
     slug: "new-pajero-sport",
-    name: "NEW PAJERO SPORT",
+    name: "MITSUBISHI PAJERO SPORT",
     fuel: "8.4L/100Km",
     price: "1,110,000,000 ₫",
     image: "/images/pajero.png",
+    // ===== GIÁ XE (thêm mới) =====
+    priceTable: [
+      { version: "PAJERO SPORT Diesel 4x2 AT 2022", price: "1,130 tỷ đ" },
+      { version: "PAJERO SPORT Diesel 4x4 AT 2021", price: "1,365 tỷ đ" }
+    ],
+    // ===== TỔNG QUAN =====
+    overviewSection: {
+      title: "TỔNG QUAN MITSUBISHI PAJERO SPORT",
+      blocks: [
+        {
+          html: `
+          <p>Mitsubishi Pajero Sport chính thức được giới thiệu tới người tiêu dùng Việt Nam với nhiều tiện nghi cao cấp và tính năng an toàn vượt trội, xe được bán ra theo 2 phiên bản máy dầu 4x2AT và 4x4AT.</p>
+          <p>Kế thừa thế mạnh truyền thống về khả năng vận hành đỉnh cao, nhằm tiếp tục đồng hành cùng khách hàng trên hành trình chinh phục, trải nghiệm những chặng đường mới, Mitsubishi Pajero Sport mới được nâng tầm với 22 thay đổi đáng giá từ thiết kế cho đến tiện nghi tiên tiến, đi cùng với đó là hệ thống an toàn MITSUBISHI e-Assist thông minh vượt trội.</p>
+        `,
+          images: [
+            // đổi đường dẫn ảnh cho khớp dự án của bạn
+            { src: "/images/pajero-overview-hero.jpg", alt: "Mitsubishi Pajero Sport" }
+          ]
+        },
+        {
+          html: `
+          <p>Với thông điệp “Ride New Life – Trải nghiệm phong cách sống mới” – Mitsubishi Pajero Sport mới được sinh ra để đáp ứng sự kì vọng của khách hàng về một mẫu xe SUV vận hành linh hoạt ở nhiều loại địa hình khác nhau nhưng vẫn mang đến sự thoải mái, tiện nghi và khả năng bảo vệ tối ưu với hàng loạt công nghệ an toàn tiên tiến, thông minh nổi bật trong phân khúc.</p>
+        `
+        }
+      ]
+    },
+    // Trong object có slug: "new-pajero-sport"
+    exteriorSection: {
+      title: "NGOẠI THẤT MITSUBISHI PAJERO SPORT 2025",
+      blocks: [
+        {
+          // Mở đầu + ảnh tổng thể
+          desc:
+            "Khoác lên mình diện mạo mới với ngôn ngữ thiết kế Dynamic Shield thế hệ thứ hai, những nâng cấp về ngoại thất trên Mitsubishi Pajero Sport tạo nên tổng thể hài hòa, cá tính; một phong thái lịch lãm và ấn tượng hơn:",
+          images: [
+            { src: "/images/pajero-ext-1.jpg", alt: "Ngoại thất Mitsubishi Pajero Sport - tổng thể" }
+          ]
+        },
+        {
+          // Thông số kích thước + mâm 18 inch
+          desc:
+            "Pajero Sport mới đậm chất SUV việt dã và mạnh mẽ với kích thước tổng thể là 4,825 x 1,815 x 1,835 (mm). Chiều dài cơ sở lên tới 2,800mm mang đến một không gian rộng rãi cho cả 3 hàng ghế, mâm xe hợp kim đa chấu thiết kế mới 18 inches 2 tông màu đem lại cảm giác mạnh mẽ, thể thao.",
+          images: [
+            { src: "/images/pajero-ext-2.jpg", alt: "Pajero Sport nhìn ngang, mâm 18 inch 2 tông màu" }
+          ]
+        },
+        {
+          // Đầu xe + Bi-LED
+          desc:
+            "Phần đầu xe nổi bật với mặt ca lăng chữ X, hốc đèn 2 bên khoét sâu, bên trên là đèn chạy LED ban ngày và đèn pha nối liền bằng những thanh mạ bạc, giúp tăng thêm vẻ cứng cáp và nam tính cho Pajero Sport. Lưới tản nhiệt phía trước được thiết kế mới với 3 thanh ngang mạ bạc cao cấp làm tăng thêm vẻ mạnh mẽ, thể thao, mở rộng từ nắp ca-pô xuống giúp xe có khả năng làm mát động cơ tốt hơn. Đặc biệt, Pajero Sport mới được trang bị đèn chiếu sáng phía trước công nghệ Bi-LED hiện đại tăng hiệu quả chiếu sáng.",
+          images: [
+            { src: "/images/pajero-ext-3.jpg", alt: "Đầu xe Pajero Sport với cụm đèn Bi-LED" }
+          ]
+        },
+        {
+          // Hệ thống rửa đèn – đoạn chữ riêng, không bỏ chữ
+          desc:
+            "Hệ thống rửa đèn chiếu sáng được trang bị trên Pajero Sport sẽ giúp loại bỏ bụi bẩn và bùn đất bám trên đèn, từ đó duy trì hiệu quả chiếu sáng tối đa, giúp người lái có khả năng quan sát tốt nhất, đảm bảo an toàn."
+        },
+        {
+          // Đuôi xe + đèn hậu LED + vây cá + cánh lướt gió
+          desc:
+            "Cụm đèn hậu với thiết kế mới đẹp mắt tích hợp công nghệ LED giúp tăng thêm vẻ cuốn hút và nhận diện đặc trưng cho Pajero Sport. Đặc biệt, Pajero Sport mới được trang bị thêm ăng-ten vây cá hiện đại và cánh lướt gió thể thao thiết kế mới mang lại sự hài hòa và hiện đại.",
+          images: [
+            { src: "/images/pajero-ext-4.jpg", alt: "Đuôi xe Pajero Sport với đèn hậu LED và vây cá" }
+          ]
+        },
+        {
+          // Khoảng sáng gầm + bán kính quay vòng
+          desc:
+            "Hệ thống treo vững chãi kết hợp khoảng sáng gầm xe cao 218mm cho phép xe dễ dàng vượt qua những địa hình khó. Trong khi đó, bán kính quay vòng tối thiểu 5,6m, nhỏ nhất trong phân khúc cũng là một điểm cộng đáng kể; bán kính quay vòng nhỏ giúp xe linh hoạt hơn khi di chuyển trong nội thành chật hẹp.",
+          images: [
+            { src: "/images/pajero-ext-5.jpg", alt: "Pajero Sport nhìn sau, thể hiện khoảng sáng gầm" }
+          ]
+        }
+      ]
+    },
+    // Thêm vào object của NEW PAJERO SPORT trong carData1
+    interiorSection: {
+      title: "NỘI THẤT MITSUBISHI PAJERO SPORT",
+      blocks: [
+        {
+          desc:
+            "Triết lý 'Omotenashi' lấy khách hàng làm trung tâm được MITSUBISHI MOTORS ứng dụng trong thiết kế nội thất của PAJERO SPORT 2020 với những tính năng tiện ích cao cấp, thông minh nhằm mang đến những trải nghiệm ưu việt, thoải mái nhất cho khách hàng. Tổng thể khoang lái đầy ấn tượng với công nghệ hiện đại tiên tiến, nội thất Pajero Sport sang trọng nhưng không kém phần tinh tế, thanh lịch và hài hòa.",
+          images: [
+            { src: "/images/pjs-interior-1.jpg", alt: "Khoang lái Pajero Sport" }
+          ]
+        },
+        {
+          html: `
+        <p>- Nội thất bọc da cao cấp, ghế lái và ghế hành khách phía trước điều chỉnh điện 8 hướng giúp giảm bớt sự mệt mỏi trong những chuyến đi dài.</p>
+        <p>- Bảng đồng hồ kỹ thuật số LCD được trang bị trên PAJERO SPORT 2020 có kích thước lớn lên đến 8 inches với 3 chế độ hiển thị thông tin hành trình, không những giúp người lái có thể dễ dàng quan sát các thông tin mà còn cho phép tùy chỉnh các dạng hiển thị khác nhau tùy theo nhu cầu và sở thích của người lái.</p>
+      `
+        },
+        {
+          images: [
+            { src: "/images/pjs-interior-2.jpg", alt: "Màn hình giải trí Pajero Sport" }
+          ],
+          html: `
+        <p>- Màn hình giải trí 8-inches với giao diện thân thiện cùng khả năng kết nối nhiều giao thức khác nhau như: Android Auto™ và Apple CarPlay™ mang đến khả năng giải trí không giới hạn. Ngoài ra, màn hình này còn có thể kết nối và cho phép hiển thị thông tin đến màn hình đồng hồ kỹ thuật số giúp người lái có thể quan sát các thông tin dễ dàng, tăng khả năng tập trung khi điều khiển xe. Bên cạnh đó, vô lăng tích hợp nút điều chỉnh đa thông tin, âm thanh, đàm thoại rảnh tay và ra lệnh bằng giọng nói, người dùng có thể dễ dàng nghe nhạc và tiện lợi hơn khi lái xe.</p>
+      `
+        },
+        {
+          images: [
+            { src: "/images/pjs-interior-3.jpg", alt: "Cửa sổ trời & điều hòa" }
+          ],
+          html: `
+        <p>- Hệ thống điều hòa tự động 2 vùng độc lập, với 2 giàn lạnh tích hợp cửa gió điều hòa cho hàng ghế thứ hai và hàng ghế thứ ba, phù hợp với điều kiện khí hậu ở Việt Nam. Ngoài ra, xe còn được trang bị chức năng làm sạch không khí Nano-e giúp mang lại không khí trong lành cho tất cả mọi người trong suốt hành trình.</p>
+        <p>- Gương chiếu hậu chống chói tự động, giúp hạn chế ánh sáng phản xạ từ gương hậu chiếu tới tài xế, ngăn ngừa hiện tượng chói mắt từ đèn pha của xe phía sau. Cửa sổ trời hiện đại mang đến những trải nghiệm thú vị cùng thiên nhiên tươi đẹp trong suốt hành trình.</p>
+        <p>- Camera toàn cảnh 360, hỗ trợ người lái dễ dàng quan sát trong các tình huống lùi, dừng và đỗ xe hoặc di chuyển trên đường đô thị đông đúc.</p>
+        <p>- Triết lý 'Omotenashi' còn có thể dễ dàng nhận thấy trên Pajero Sport 2020 thông qua tính năng đóng mở cốp sau bằng điện và đá cốp thông minh. Đặc biệt, khác với các mẫu xe khác, vốn chỉ trang bị 1 cảm biến đá cốp đặt ngay giữa cản sau vốn gây ra đôi chút phiền toái trong thao tác đóng mở cốp, Pajero Sport 2020 được trang bị đến 2 cảm biến đá cốp đặt ở 2 góc của cản sau, giúp cho thao tác đã cốp dễ dàng và thuận tiện hơn.</p>
+      `
+        },
+        {
+          images: [
+            { src: "/images/pjs-interior-4.jpg", alt: "Ghế ngồi Pajero Sport" }
+          ],
+          html: `
+        <p>- Không những vậy, Mitsubishi Pajero Sport 2020 còn mang đến sự tiện dụng cao và đẳng cấp cho khách hàng khi lần đầu tiên được trang bị ứng dụng điều khiển từ xa MITSUBISHI thông qua điện thoại thông minh, có thể hoạt động trên các điện thoại thông minh với hai hệ điều hành Android™ và iOS™ và đồng hồ thông minh Apple Watch™. Ứng dụng giúp người dùng có thể tìm vị trí xe trong bãi đậu xe, mở/đóng cốp từ xa một cách dễ dàng hay đặt trạng thái chờ mở cốp giúp việc mở cốp thuận tiện hơn dù người cầm chìa khóa vẫn đang đứng cách xa xe, ngoài ra ứng dụng còn có thể hiển thị các thông tin tiết kiệm nhiên liệu, lượng nhiên liệu và nhắc nhở trạng thái của xe: người lái quên khóa cửa xe hay kính cửa sổ chưa được đóng kín…</p>
+      `
+        },
+        {
+          images: [
+            { src: "/images/pjs-interior-5.jpg", alt: "Khoang lái & tiện nghi hỗ trợ lái" }
+          ],
+          html: `
+        <p>- Đặc biệt, Mitsubishi Pajero Sport 2020 được tích hợp thêm tính năng phanh tay điện tử tự động và chế độ giữ phanh tự động, giúp người lái nhàn nhã hơn trong quá trình vận hành. Các tiện nghi khác có thể kể đến như nút bấm khởi động, cảm biến bật tắt đèn chiếu sáng tự động, cảm biến gạt mưa tự động, tự động điều chỉnh độ cao đèn chiếu sáng… tất cả đều góp phần mang đến một trải nghiệm đầy tiện dụng và đẳng cấp cho các khách hàng.</p>
+      `
+        }
+      ]
+    },
+    performanceSection: {
+      title: "VẬN HÀNH MITSUBISHI PAJERO SPORT 2025",
+      blocks: [
+        {
+          desc:
+            "Khả năng vận hành mạnh mẽ luôn là một trong những ưu điểm vượt trội khi nhắc đến Pajero Sport, mẫu xe mang trong mình “Mã gen SUV” hay còn được gọi là “Chất-MITSUBISHI” vốn đã được minh chứng qua những đường đua Rally khắc nghiệt nhất hành tinh.\n\nPajero Sport mới sử dụng khối động cơ với công nghệ điều khiển van biến thiên điện tử cho công suất 133kW (181PS) tại 3.500v/ph và mô-men xoắn cực đại 430Nm tại 2.500v/ph. Đặc biệt, khối động cơ được đúc bằng hợp kim nhôm giúp tối ưu trọng lượng đóng góp vào việc phân bổ trọng lượng hợp lý giữa cầu trước và cầu sau từ đó giúp xe vận hành ổn định hơn. Ngoài ra, tỷ số nén của động cơ thấp cũng góp phần giúp giảm thiểu rung động mang đến sự êm ái trong vận hành.",
+          images: [
+            { src: "/images/pajero-perf-1.jpg", alt: "Pajero Sport vận hành trên đường" }
+          ]
+        },
+        {
+          desc:
+            "Khối động cơ DIESEL MIVEC 2.4L còn trở nên ưu việt hơn nhờ vào sự kết hợp cùng hộp số tự động 8 cấp với chế độ thể thao. Dãy tỷ số truyền trải rộng giúp việc chuyển số mượt mà và êm ái hơn, bên cạnh đó Pajero Sport 2020 còn giúp cho người lái thăng hoa và phấn khích hơn nhờ vào việc tích hợp lẫy chuyển số trên vô-lăng giúp làm chủ quá trình chuyển số, đặc biệt phù hợp khi cần tăng tốc, vượt xe hoặc khi di chuyển trên đường đèo dốc."
+        },
+        {
+          images: [
+            { src: "/images/pajero-perf-2.jpg", alt: "Cần số & Super Select 4WD-II" }
+          ],
+          desc:
+            "Pajero Sport 2020 được trang bị hệ thống truyền động 2 cầu Super Select 4WD-II trứ danh của Mitsubishi. Khác với hệ dẫn động 4WD gián đoạn hiện đang được trang bị trên một số mẫu xe SUV khác, người lái chỉ có thể dùng chế độ 2 cầu trong những trường hợp điều kiện đường khó khăn do chế độ 2 cầu trên các mẫu xe này sẽ gây ra hiện tượng trượt bánh khi đánh lái do sự lệch tốc giữa cầu trước và cầu sau không được triệt tiêu, việc này gây ra khó khăn khi đánh lái và cảm giác khó chịu cho người lái. Super Select 4WD-II được sinh ra để làm tốt vai trò khống chế sự khác biệt tốc độ giữa các bánh giúp chiếc xe vận hành êm ái và an toàn trên đường có điều kiện trường nhập vào việc được trang bị vi sai trung tâm giúp triệt tiêu độ lệch tốc giữa cầu trước và cầu sau. Với 4 chế độ cầu 2H–4H–4HLc–4LLc, hệ thống Super Select 4WD-II giúp người lái tự tin, linh hoạt chọn chế độ phù hợp cho Pajero Sport như ở chế độ 2H giúp tiết kiệm với chế độ 1 cầu (2H), vừa có thể vận hành an toàn trên điều kiện đường trơn trượt như một mẫu xe dẫn động 4 bánh toàn thời gian (AWD) ở chế độ 4H, ổn định vượt trội với chế độ 4HLc (2 cầu vi sai trung tâm khóa) khi di chuyển ở điều kiện địa hình phức tạp, offroad với các chế độ gài cầu 4Hlc (2 cầu nhanh vi sai trung tâm khóa) hoặc 4LLc (2 cầu chậm với vi sai trung tâm)."
+        },
+        {
+          desc:
+            "Bên cạnh đó, Pajero Sport 2020 cũng mang đến cho người lái thêm 4 chế độ lựa chọn chạy địa hình (Sỏi – Bùn – Cát – Đá) thao tác dễ dàng chỉ bằng một nút bấm giúp hỗ trợ người lái dễ dàng lựa chọn chế độ lái tương ứng với điều kiện địa hình giúp mang lại trải nghiệm lái chân thật hoàn hảo vượt trội."
+        },
+        {
+          desc:
+            "Đặc biệt hơn, Mitsubishi Pajero Sport 2020 còn được trang bị thêm khóa vi sai cầu sau điều khiển điện tử bằng nút bấm “ON/OFF R/D LOCK” nằm ở bảng điều khiển trung tâm. Nâng cấp này giúp cho xe có thể dễ dàng vượt qua các loại địa hình khó khăn nhờ vào việc khóa vi sai và phân bổ lực đều xuống 2 bánh sau."
+        }
+      ]
+    },
+// --- AN TOÀN, THÔNG SỐ, HÌNH ẢNH Pajero Sport ---
+safetySection: {
+      title: "AN TOÀN MITSUBISHI PAJERO SPORT",
+      blocks: [
+        {
+          desc:
+            "An toàn cao cấp với hệ thống Mitsubishi e-Assist thông minh, mang lại sự an tâm cho khách hàng trên mọi chuyến đi.",
+          images: [{ src: "/images/pjs-safety-hero.jpg", alt: "Mitsubishi e-Assist trên Pajero Sport" }]
+        },
+        {
+          subtitle: "Trang bị an toàn nổi bật",
+          list: [
+            "7 túi khí an toàn",
+            "Hệ thống phanh giảm thiểu va chạm phía trước (FCM)",
+            "Cảnh báo điểm mù (BSW) & Hỗ trợ chuyển làn (LCA)",
+            "Cảnh báo phương tiện cắt ngang khi lùi (RCTA)",
+            "Hệ thống chống tăng tốc ngoài ý muốn (UMS)",
+            "Ga tự động thích ứng (ACC)",
+            "Hệ thống kiểm soát chân ga khi đạp phanh (BOS)",
+            "Camera lùi & cảm biến trước/sau",
+            "Khung xe RISE thép siêu cường",
+            "ABS, EBD, BA, Kiểm soát ổn định & lực kéo (ASTC)",
+            "Hỗ trợ xuống dốc HDC & Khởi hành ngang dốc HSA"
+          ]
+        }
+      ]
+    },
+
+    specsSection: {
+      title: "THÔNG SỐ MITSUBISHI PAJERO SPORT",
+      blocks: [
+        {
+          // Dùng HTML để có 2 cột giống ảnh
+          html: `
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border border-gray-200">
+            <thead>
+              <tr class="bg-[#E51A1A] text-white">
+                <th class="p-2 text-left">Thông số kỹ thuật</th>
+                <th class="p-2 text-left">Pajero Sport 4x2AT</th>
+                <th class="p-2 text-left">Pajero Sport 4x4AT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-gray-50"><td class="p-2">Kiểu dáng xe</td><td class="p-2">SUV</td><td class="p-2">SUV</td></tr>
+              <tr><td class="p-2">Nguồn gốc</td><td class="p-2">Nhập khẩu</td><td class="p-2">Nhập khẩu</td></tr>
+              <tr class="bg-gray-50"><td class="p-2">Số chỗ ngồi</td><td class="p-2">7c</td><td class="p-2">7c</td></tr>
+              <tr><td class="p-2">Kích thước DxRxC (mm)</td><td class="p-2">4.825 x 1.815 x 1.835</td><td class="p-2">4.825 x 1.815 x 1.835</td></tr>
+              <tr class="bg-gray-50"><td class="p-2">Chiều dài cơ sở</td><td class="p-2">2.800 mm</td><td class="p-2">2.800 mm</td></tr>
+              <tr><td class="p-2">Khoảng sáng gầm</td><td class="p-2">218 mm</td><td class="p-2">218 mm</td></tr>
+              <tr class="bg-gray-50"><td class="p-2">Bán kính vòng quay</td><td class="p-2">5,6 m</td><td class="p-2">5,6 m</td></tr>
+              <tr><td class="p-2">Tự trọng</td><td class="p-2">1940 (kg)</td><td class="p-2">2115 (kg)</td></tr>
+              <tr class="bg-gray-50"><td class="p-2">Động cơ</td><td class="p-2">Diesel; 2.4L MIVEC; i4</td><td class="p-2">Diesel; 2.4L MIVEC; i4</td></tr>
+              <tr><td class="p-2">Công suất cực đại</td><td class="p-2">181 Ps / 4500 rpm</td><td class="p-2">181 Ps / 4500 rpm</td></tr>
+              <tr class="bg-gray-50"><td class="p-2">Mô-men xoắn cực đại</td><td class="p-2">430 Nm / 2500 rpm</td><td class="p-2">430 Nm / 2500 rpm</td></tr>
+              <tr><td class="p-2">Hộp số</td><td class="p-2">8AT</td><td class="p-2">8AT</td></tr>
+              <tr class="bg-gray-50"><td class="p-2">Dẫn động</td><td class="p-2">RWD</td><td class="p-2">4WD</td></tr>
+            </tbody>
+          </table>
+        </div>
+      `
+        }
+      ]
+    },
+
+    gallerySection: {
+      title: "HÌNH ẢNH MITSUBISHI PAJERO SPORT",
+      blocks: [
+        {
+          // Nếu bạn đã thêm slider trong CarDetailPage, bật cờ slider: true
+          slider: true,
+          images: [
+            { src: "/images/pajero-ext-1.jpg", alt: "Pajero Sport nhìn từ sau" },
+       
+          ]
+        }
+      ]
+    },
+
   },
   {
     slug: "xpander-cross",
