@@ -28,116 +28,106 @@ export default function CarDetailPage() {
         <div className="border-b-[3px] border-[#E51A1A] mt-2" />
 
         <div className="p-4 md:p-6">
-          {section.blocks?.map((block, idx) => (
-            <article key={idx} className="mb-8">
-              {/* Sub-title */}
-              {block.subtitle ? (
-                <h3 className="text-base md:text-lg font-bold text-black mb-2">
-                  {block.subtitle}
-                </h3>
-              ) : null}
+         {section.blocks?.map((block, idx) => {
+  // Chuẩn hóa các key phổ biến
+  const textHtml =
+    block.html ||
+    block.desc ||
+    block.text ||
+    block.content ||
+    null;
 
-              {/* Mô tả thuần văn bản */}
-              {block.desc && (
-                <p className="text-[15px] md:text-base leading-7 text-[#333] mb-3">
-                  {block.desc}
-                </p>
-              )}
+  const bullets = block.list || block.items || block.bullets || [];
 
-              {/* Mô tả dùng HTML */}
-              {block.html && (
-                <div
-                  className="text-[15px] md:text-base leading-7 text-[#333] mb-3"
-                  dangerouslySetInnerHTML={{ __html: block.html }}
-                />
-              )}
+  // Chấp nhận cả table: [[k,v]] hoặc [{key,label,value,val}]
+  const rawRows = block.table || block.rows || block.specs || [];
+  const tableRows = rawRows.map(r =>
+    Array.isArray(r)
+      ? r
+      : [r.key ?? r.label ?? "", r.value ?? r.val ?? ""]
+  );
 
-              {/* Video YouTube */}
-              {block.videoId && (
-                <div className="aspect-video w-full mb-4">
-                  <iframe
-                    className="w-full h-full rounded"
-                    src={`https://www.youtube.com/embed/${block.videoId}`}
-                    title={block.videoTitle || block.subtitle || section.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              )}
+  // Ảnh: chấp nhận block.images (mảng), hoặc block.image (obj hoặc string)
+  let images = [];
+  if (Array.isArray(block.images)) images = block.images;
+  else if (block.image) {
+    images = [typeof block.image === "string" ? { src: block.image } : block.image];
+  }
 
-              {/* LIST (dạng gạch đầu dòng) */}
-              {Array.isArray(block.list) && block.list.length > 0 && (
-                <ul className="list-disc ml-6 text-gray-700 mb-3">
-                  {block.list.map((it, i) => (
-                    <li key={i}>{it}</li>
-                  ))}
-                </ul>
-              )}
+  return (
+    <article key={idx} className="mb-8">
+      {block.subtitle ? (
+        <h3 className="text-base md:text-lg font-bold text-black mb-2">{block.subtitle}</h3>
+      ) : null}
 
-              {/* TABLE (key/value) - mảng [label, value] */}
-              {Array.isArray(block.table) && block.table.length > 0 && (
-                <table className="w-full text-sm border border-gray-200 mb-3">
-                  <tbody>
-                    {block.table.map((row, i) => (
-                      <tr key={i} className={i % 2 ? "bg-white" : "bg-gray-50"}>
-                        <td className="p-2 font-semibold w-1/2 border-b border-gray-200">
-                          {Array.isArray(row) ? row[0] : ""}
-                        </td>
-                        <td className="p-2 border-b border-gray-200">
-                          {Array.isArray(row) ? row[1] : ""}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )}
+      {/* Mô tả (ưu tiên html) */}
+      {textHtml && (
+        typeof textHtml === "string" && textHtml.includes("<")
+          ? <div className="text-[15px] md:text-base leading-7 text-[#333] mb-3" dangerouslySetInnerHTML={{ __html: textHtml }} />
+          : <p className="text-[15px] md:text-base leading-7 text-[#333] mb-3 whitespace-pre-line">{textHtml}</p>
+      )}
 
-              {/* IMAGES */}
-              {Array.isArray(block.images) && block.images.length > 0 && (
-                block.layout === "grid-2" ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
-                    {block.images.map((img, i) => (
-                      <figure key={i} className="flex flex-col items-center text-center">
-                        <img
-                          src={img.src}
-                          alt={img.alt || ""}
-                          className="w-full h-auto rounded shadow-sm object-cover mx-auto"
-                        />
-                        {img.caption && (
-                          <figcaption className="text-sm md:text-base text-[#555] mt-2 italic text-center">
-                            {img.caption}
-                          </figcaption>
-                        )}
-                      </figure>
-                    ))}
-                  </div>
-                ) : (
-                  block.images.map((img, i) => (
-                    <figure key={i} className="mb-4 flex flex-col items-center text-center">
-                      <img
-                        src={img.src}
-                        alt={img.alt || ""}
-                        className="w-full h-auto rounded shadow-sm object-cover mx-auto"
-                      />
-                      {img.caption && (
-                        <figcaption className="text-sm md:text-base text-[#555] mt-2 italic text-center">
-                          {img.caption}
-                        </figcaption>
-                      )}
-                    </figure>
-                  ))
-                )
-              )}
+      {/* Video */}
+      {block.videoId && (
+        <div className="aspect-video w-full mb-4">
+          <iframe
+            className="w-full h-full rounded"
+            src={`https://www.youtube.com/embed/${block.videoId}`}
+            title={block.videoTitle || block.subtitle || section.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      )}
 
-              {/* Chú thích toàn block nếu cần */}
-              {block.caption && (
-                <div className="text-sm md:text-base text-[#555] mt-1 italic text-center">
-                  {block.caption}
-                </div>
-              )}
-            </article>
-          ))}
+      {/* List */}
+      {bullets.length > 0 && (
+        <ul className="list-disc ml-6 text-gray-700 mb-3">
+          {bullets.map((it, i) => <li key={i}>{it}</li>)}
+        </ul>
+      )}
+
+      {/* Table */}
+      {tableRows.length > 0 && (
+        <table className="w-full text-sm border border-gray-200 mb-3">
+          <tbody>
+            {tableRows.map((row, i) => (
+              <tr key={i} className={i % 2 ? "bg-white" : "bg-gray-50"}>
+                <td className="p-2 font-semibold w-1/2 border-b border-gray-200">{row[0]}</td>
+                <td className="p-2 border-b border-gray-200">{row[1]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+
+      {/* Images (1 hoặc nhiều) */}
+      {images.length > 0 && (
+        block.layout === "grid-2" ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
+            {images.map((img, i) => (
+              <figure key={i} className="flex flex-col items-center text-center">
+                <img src={img.src} alt={img.alt || ""} className="w-full h-auto rounded shadow-sm object-cover mx-auto" />
+                {img.caption && <figcaption className="text-sm md:text-base text-[#555] mt-2 italic text-center">{img.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        ) : (
+          images.map((img, i) => (
+            <figure key={i} className="mb-4 flex flex-col items-center text-center">
+              <img src={img.src} alt={img.alt || ""} className="w-full h-auto rounded shadow-sm object-cover mx-auto" />
+              {img.caption && <figcaption className="text-sm md:text-base text-[#555] mt-2 italic text-center">{img.caption}</figcaption>}
+            </figure>
+          ))
+        )
+      )}
+
+      {block.caption && <div className="text-sm md:text-base text-[#555] mt-1 italic text-center">{block.caption}</div>}
+    </article>
+  );
+})}
+
         </div>
       </section>
     );
