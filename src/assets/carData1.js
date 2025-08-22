@@ -1413,10 +1413,232 @@ Các phiên bản:
   },
   {
     slug: "triton-4wd-at-athlete",
-    name: "TRITON 4WD AT ATHLETE",
+    name: "MITSUBISHI TRITON",
     fuel: "8.6L/100Km",
     price: "924,000,000 ₫",
     image: "/images/triton-athlete.png",
+    priceTable: [
+      { version: "Triton GLX 4x2 AT Euro 5", price: "650 triệu đ" },
+      { version: "Triton GLS 4x2 AT Athlete Euro 5", price: "780 triệu đ" },
+      { version: "Triton GLS 4x4 AT Athlete Euro 5", price: "905 triệu đ" },
+    ],
+    overviewSection: {
+      title: "TỔNG QUAN MITSUBISHI TRITON",
+      blocks: [
+        {
+          desc:
+            "Triton Athlete sẽ thay thế hai phiên bản AT Premium hiện nay, với một số khác biệt về nội và ngoại thất, mức giá 760–885 triệu đồng.",
+        },
+        {
+          // Đổi videoId thành ID thật của video bạn muốn nhúng
+          videoId: "yXgS94nl1oo",
+          videoTitle: "Đánh giá Mitsubishi Triton Athlete",
+        },
+        {
+          desc:
+            "Ngoại thất Triton 4x4 AT và 4x2 AT toát vẻ hầm hố hơn nhờ những điểm nhấn màu đen ở ốp cản trước, lưới tản nhiệt, ốp gương chiếu hậu, vành xe hợp kim, chắn bùn, và bộ tem Athlete kéo dài về phía đuôi xe cùng dòng chữ “Triton Athlete”.",
+        },
+      ],
+    },
+    exteriorSection: {
+      title: "NGOẠI THẤT MITSUBISHI TRITON",
+      blocks: [
+        {
+          html: `
+        <p>So với các bản khác, Xe bán tải Triton Athlete 2022 sở hữu ngoại hình hầm hố, nam tính hơn nhờ được bổ sung thêm các phần ốp tối màu và tem thể thao. Xe vẫn duy trì kích thước tổng thể DxRxC lần lượt là 5.305 x 1.815 x 1.795 mm.</p>
+      `,
+          images: [
+            { src: "/images/triton-ext-1.jpg", alt: "Triton Athlete 2022 góc 3/4 đầu xe" }
+          ]
+        },
+        {
+          subtitle: "Đầu xe",
+          html: `
+        <p>Nhìn từ trực diện, khách hàng có thể dễ dàng nhận ra Triton Athlete 2022 với bộ lưới tản nhiệt và ốp cản trước đều sơn đen mờ thể thao, nam tính hơn kiểu mạ crom sáng bóng.</p>
+      `,
+          images: [
+            { src: "/images/triton-ext-2.jpg", alt: "Đầu xe Triton Athlete 2022 trực diện" }
+          ]
+        },
+        {
+          subtitle: "Thân xe",
+          images: [
+            { src: "/images/triton-ext-3.jpg", alt: "Hông xe Triton Athlete 2022" }
+          ]
+        },
+        {
+          html: `
+        <p>Di chuyển sang phần hông, Triton Athlete 2022 tạo hiệu ứng thị giác mạnh mẽ với bộ tem “Triton Athlete” dắt giá dàn hết thùng hàng. Cả 4 vòm bánh được bổ sung thêm ốp nhựa màu đen trông cứng cáp hơn, đồng thời hạn chế những va chạm do đá văng.</p>
+      `,
+          images: [
+            { src: "/images/triton-ext-4.jpg", alt: "Ốp vòm bánh & mâm Triton Athlete 2022" }
+          ]
+        },
+        {
+          html: `
+        <p>Bên cạnh đó, bộ vành 18 inch đa chấu kép, gương chiếu hậu, tay nắm cửa, bệ bước chân cũng đều được làm tối màu đồng bộ.</p>
+        <p>Triton Athlete 2022 sở hữu cặp gương chiếu hậu hiện đại có tính năng gập-chỉnh điện, sưởi gương, chống chói tự động và tích hợp đèn báo rẽ. Thùng hàng có kích thước thùng xe DxRxC lần lượt là 1.520 x 1.470 x 475 mm.</p>
+      `,
+          images: [
+            { src: "/images/triton-ext-5.jpg", alt: "Gương chiếu hậu & tay nắm cửa tối màu" }
+          ]
+        },
+        {
+          subtitle: "Đuôi xe",
+          html: `
+        <p>Nhìn từ sau, khách hàng vẫn có thể nhận ra bản Triton Athlete 2022 thông qua tay nắm cửa thùng hàng và cản sau đều được sơn đen, khác với kiểu mạ crom trên các bản thường. Cụm đèn hậu vẫn có cấu trúc xếp tầng, tạo điểm nhấn với đồ họa LED hình chiếc búa.</p>
+      `,
+          images: [
+            { src: "/images/triton-ext-6.jpg", alt: "Đuôi xe Triton Athlete 2022" }
+          ]
+        }
+      ]
+    },
+    interiorSection: {
+      title: "NỘI THẤT MITSUBISHI TRITON",
+      blocks: [
+        {
+          desc:
+            "Khoang nội thất của xe bán tải Triton 2022 bản Athlete có 2 tone màu cam – đen chủ đạo đồng bộ với diện mạo bên ngoài.",
+          subtitle: "Khoang lái",
+          images: [
+            {
+              src: "/images/triton-int-1.jpg",
+              alt: "Khoang lái Mitsubishi Triton Athlete 2022"
+            }
+          ]
+        },
+        {
+          desc:
+            "Bước vào khoang lái, khách hàng sẽ ấn tượng ngay với phần ghế ngồi bọc da phối 2 màu cam–đen nổi bật. Tựa lưng có thêm dòng chữ “ATHLETE” góp phần tăng cường độ nhận diện. Trong đó, ghế lái có thể chỉnh điện 8 hướng, ghế phụ chỉ chỉnh cơ.",
+          images: [
+            {
+              src: "/images/triton-int-2.jpg",
+              alt: "Ghế trước Triton Athlete 2 tông màu"
+            }
+          ]
+        },
+        {
+          desc:
+            "Điểm nhấn kế tiếp là đường chỉ khâu màu cam tại vô lăng, cần số, ốp cửa giúp không gian trông tươi mới hơn. Xe Triton Athlete 2022 sử dụng vô lăng 4 chấu bọc da tích hợp nhiều nút bấm tiện lợi và 2 lẫy chuyển số đặt sau vô lăng giúp mang đến cảm giác lái thú vị.",
+
+        },
+        {
+          subtitle: "Khoang hành khách",
+          desc:
+            "So với những đối thủ trong phân khúc, hàng ghế sau trên Triton Athlete 2022 được đánh giá cao khi mang đến sự thoải mái cho hành khách. Đó là nhờ khoảng để chân 1.745 mm rộng nhất phân khúc và có độ ngả lưng 25 độ theo thiết kế J-line. Đi kèm là 3 tựa đầu, bệ tỳ tay, cửa gió điều hoà riêng giúp giảm bớt mệt mỏi khi đi xa.",
+          images: [
+            {
+              src: "/images/triton-int-3.jpg",
+              alt: "Hàng ghế sau Triton Athlete"
+            }
+          ]
+        },
+        {
+          subtitle: "Tiện nghi – Đủ dùng",
+          desc:
+            "Hiệu suất làm mát trên xe Mitsubishi Triton Athlete 2022 không thua kém bất kỳ đối thủ nào khi sử dụng dàn điều hoà tự động 2 vùng kết hợp cùng cửa gió điều hoà hàng ghế sau. Danh sách hệ thống giải trí trên xe gồm có những tính năng đáng chú ý như:",
+          list: [
+            "Màn hình cảm ứng 6,75 inch",
+            "Hỗ trợ kết nối Android Auto, Apple CarPlay, AUX, USB, Bluetooth",
+            "Dàn âm thanh 6 loa",
+            "Chìa khoá thông minh, khởi động bằng nút bấm"
+          ],
+          images: [
+            {
+              src: "/images/triton-int-4.jpg",
+              alt: "Màn hình trung tâm và điều hoà Triton"
+            }
+          ]
+        }
+      ]
+    },
+performanceSection: {
+  title: "VẬN HÀNH MITSUBISHI TRITON",
+  blocks: [
+    { html: "Xe Mitsubishi Triton Athlete 2022 có “trái tim” là khối động cơ máy dầu 2.4L MIVEC. Cỗ máy này có khả năng sản sinh công suất tối đa 179 mã lực tại 3.500 vòng/phút, mô men xoắn cực đại 430 Nm tại 2.500 vòng/phút. Đi kèm hộp số tự động 6 cấp tích hợp chế độ lái thể thao." },
+    { image: { src: "/images/triton-perf-1.jpg", alt: "Động cơ Triton 2.4L MIVEC" } },
+    { text: "Mitsubishi Triton Athlete 2022 có 2 tùy chọn hệ truyền động cầu sau hoặc 2 cầu Super Select 4WD-II. Trong đó, hệ dẫn động 2 cầu Super Select 4WD-II trên bản Athlete 4×4 AT được tích hợp 4 chế độ gài cầu:" },
+    { items: ["2H (1 cầu)", "4H (2 cầu)", "4HLc (2 cầu nhanh với khóa vi sai trung tâm)", "4LLc (2 cầu chậm, khóa vi sai trung tâm)"] },
+    { text: "Tính đến thời điểm hiện tại, Triton Athlete 2022 là mẫu bán tải duy nhất trong phân khúc sở hữu đồng thời khoá vi sai trung tâm và vi sai cầu sau. Từ đó mang đến khả năng vận hành mạnh mẽ khi kết hợp cùng 4 chế độ lái địa hình là sỏi, bùn, cát và đá." },
+    { text: "Với lợi thế khoảng sáng gầm cao 220 mm, Triton Athlete 2022 có thích nghi tốt với điều kiện đường xá phức tạp và có khả năng “lội nước” tốt vào mùa mưa. Khi di chuyển on-road, Triton Athlete 2022 mang đến trải nghiệm êm ái nhờ sử dụng treo trước/sau dạng độc lập, tay đòn kép, lò xo cuộn với thanh cân bằng/nhíp lá." }
+  ]
+},
+
+
+    safetySection: {
+      title: "AN TOÀN MITSUBISHI TRITON",
+      blocks: [
+         { html: "Danh sách an toàn trên Triton Athlete 2022 gồm có loạt tính năng hiện đại gồm:" },
+        {
+          list: [
+            "7 túi khí",
+            "Chống bó cứng phanh",
+            "Phân bổ lực phanh điện tử",
+            "Hỗ trợ phanh khẩn cấp",
+            "Cân bằng điện tử",
+            "Kiểm soát lực kéo",
+            "Hỗ trợ khởi hành ngang dốc",
+            "Hỗ trợ xuống dốc",
+            "Cảm biến lùi",
+            "Hệ thống cảnh báo và giảm thiểu va chạm phía trước",
+            "Cảnh báo điểm mù",
+            "Hỗ trợ chuyển làn đường",
+            "Hệ thống chống tăng tốc ngoài ý muốn",
+            "Đèn pha tự động",
+            "Hệ thống cảnh báo phương tiện cắt ngang khi lùi",
+            "Cruise Control"
+          ]
+        }
+      ]
+    },
+
+specsSection: {
+  title: "THÔNG SỐ MITSUBISHI TRITON",
+  blocks: [
+    {
+      rows: [
+        { label: "Tên xe", value: "Mitsubishi Triton Athlete 2022" },
+        { label: "Số chỗ ngồi", value: "05" },
+        { label: "Kiểu xe", value: "Xe Bán tải (Pickup)" },
+        { label: "Xuất xứ", value: "Nhập khẩu" },
+        { label: "Kích thước tổng thể DxRxC", value: "5.305 x 1.815 x 1.795 mm" },
+        { label: "Kích thước thùng xe DxRxC", value: "1.520 x 1.470 x 475 mm" },
+        { label: "Chiều dài cơ sở", value: "3.000 mm" },
+        { label: "Động cơ", value: "2.4L MIVEC" },
+        { label: "Loại nhiên liệu", value: "Máy dầu" },
+        { label: "Dung tích bình nhiên liệu", value: "75 lít" },
+        { label: "Công suất cực đại", value: "179 mã lực tại 3.500 vòng/phút" },
+        { label: "Mô-men xoắn cực đại", value: "430 Nm tại 2.500 vòng/phút" },
+        { label: "Hộp số", value: "Tự động 6 cấp" },
+        { label: "Hệ dẫn động", value: "2 cầu Super Select 4WD-II" },
+        { label: "Treo trước/sau", value: "Độc lập, tay đòn kép, lò xo cuộn với thanh cân bằng/nhíp lá" },
+        { label: "Phanh trước/sau", value: "Đĩa thông gió/tang trống" },
+        { label: "Trợ lực lái", value: "Thuỷ lực" },
+        { label: "Chế độ lái địa hình", value: "Sỏi, bùn, cát và đá" },
+        { label: "Cỡ mâm", value: "18 inch" },
+        { label: "Khoảng sáng gầm xe", value: "220 mm" }
+      ]
+    }
+  ]
+},
+
+
+
+    gallerySection: {
+      title: "HÌNH ẢNH MITSUBISHI TRITON",
+      blocks: [
+        {
+          slider: true,
+          images: [
+            { src: "/images/triton-ext-1.jpg", alt: "Mitsubishi Triton Athlete 2022 góc sau" }
+          ]
+        }
+      ]
+    }
+
+
+
   }
 ];
 export default carData;
