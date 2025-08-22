@@ -928,255 +928,481 @@ Các phiên bản:
     fuel: "4.42L/100Km",
     price: "380,000,000 ₫",
     image: "/images/attrage.png",
-     priceTable: [
-    { version: "Mitsubishi Attrage MT",            price: "380 triệu đ" },
-    { version: "Mitsubishi Attrage CVT",           price: "465 triệu đ" },
-    { version: "Mitsubishi Attrage CVT Premium",   price: "490 triệu đ" }
-  ],
+    priceTable: [
+      { version: "Mitsubishi Attrage MT", price: "380 triệu đ" },
+      { version: "Mitsubishi Attrage CVT", price: "465 triệu đ" },
+      { version: "Mitsubishi Attrage CVT Premium", price: "490 triệu đ" }
+    ],
 
-  // --- TỔNG QUAN (giống layout đang dùng) ---
-  overviewSection: {
-    title: "TỔNG QUAN MITSUBISHI ATTRAGE",
-    blocks: [
-      {
-        subtitle: "New Mitsubishi Attrage – Khởi đầu vững chắc",
-        html: `
+    // --- TỔNG QUAN (giống layout đang dùng) ---
+    overviewSection: {
+      title: "TỔNG QUAN MITSUBISHI ATTRAGE",
+      blocks: [
+        {
+          subtitle: "New Mitsubishi Attrage – Khởi đầu vững chắc",
+          html: `
           <p>Mitsubishi Motors Việt Nam (MMV) vừa giới thiệu Attrage phiên bản nâng cấp mới. 
           Attrage được bán ra 3 phiên bản: số sàn (MT), số tự động (CVT) và số tự động (CVT Premium) 
           với mức giá khởi điểm từ <b>380 triệu đồng</b>.</p>
         `
-      },
-      {
-        // Thay videoId này bằng ID YouTube bạn muốn (nếu có)
-        videoId: "T2qqtiqop0o"
-      }
-    ]
-  },
-  // ----- NGOẠI THẤT MITSUBISHI ATTRAGE -----
-exteriorSection: {
-  title: "NGOẠI THẤT MITSUBISHI ATTRAGE",
-  blocks: [
-    {
-      desc:
-        "Mitsubishi Attrage mang đến cái nhìn trẻ trung, hiện đại hơn nhờ được áp dụng triệt để ngôn ngữ thiết kế Dynamic Shield. Xe có kích thước tổng thể dài x rộng x cao lần lượt là 4305 x 1607 x 1505 mm.",
-      images: [
-        { src: "/images/attrage-ex-hero.jpg", alt: "Ngoại thất Mitsubishi Attrage" }
+        },
+        {
+          // Thay videoId này bằng ID YouTube bạn muốn (nếu có)
+          videoId: "T2qqtiqop0o"
+        }
       ]
     },
-    {
-      subtitle: "Đầu xe",
-      desc:
-        "Khách hàng sẽ không mất nhiều thời gian để làm quen với diện mạo mới của Attrage . Bởi phần đầu xe có thiết kế khá giống những mẫu xe đời mới của Mitsubishi. Diện hình như hốc đèn sương mù hai bên có thiết kế khoét sâu góc cạnh và được viền crom hình chữ “C” để khiến người dùng liên tưởng đến Xpander.",
-      images: [
-        { src: "/images/attrage-ex-front-1.jpg", alt: "Đầu xe Attrage" }
+    // ----- NGOẠI THẤT MITSUBISHI ATTRAGE -----
+    exteriorSection: {
+      title: "NGOẠI THẤT MITSUBISHI ATTRAGE",
+      blocks: [
+        {
+          desc:
+            "Mitsubishi Attrage mang đến cái nhìn trẻ trung, hiện đại hơn nhờ được áp dụng triệt để ngôn ngữ thiết kế Dynamic Shield. Xe có kích thước tổng thể dài x rộng x cao lần lượt là 4305 x 1607 x 1505 mm.",
+          images: [
+            { src: "/images/attrage-ex-hero.jpg", alt: "Ngoại thất Mitsubishi Attrage" }
+          ]
+        },
+        {
+          subtitle: "Đầu xe",
+          desc:
+            "Khách hàng sẽ không mất nhiều thời gian để làm quen với diện mạo mới của Attrage . Bởi phần đầu xe có thiết kế khá giống những mẫu xe đời mới của Mitsubishi. Diện hình như hốc đèn sương mù hai bên có thiết kế khoét sâu góc cạnh và được viền crom hình chữ “C” để khiến người dùng liên tưởng đến Xpander.",
+          images: [
+            { src: "/images/attrage-ex-front-1.jpg", alt: "Đầu xe Attrage" }
+          ]
+        },
+        {
+          desc:
+            "Bên cạnh đèn pha Halogen thông dụng, Attrage còn được cung cấp công nghệ Bi-LED hiện đại trên các bản cao cấp. Qua đó giúp tăng cường hiệu năng chiếu sáng đáng kể so với bản tiền nhiệm. Đi kèm là dải đèn LED ban ngày được vuốt cong sắc sảo.",
+          images: [
+            { src: "/images/attrage-ex-front-2.jpg", alt: "Cụm đèn trước Attrage" }
+          ]
+        },
+        {
+          subtitle: "Thân xe",
+          desc:
+            "Nhìn từ bên hông, thay đổi đáng chú ý nhất trên Attrage là bộ vành mới có cấu trúc đa chấu kép sơn màu bạc có kích thước từ 14–15 inch.",
+          images: [
+            { src: "/images/attrage-ex-side.jpg", alt: "Thân xe Attrage" }
+          ]
+        },
+        {
+          desc:
+            "Những chi tiết còn lại gần như được giữ nguyên với đường nhấn gân guốc được vuốt dài từ vòm bánh trước và kết thúc tại đèn hậu. Phía trên là cặp gương chiếu hậu có chức năng gập-chỉnh điện và tích hợp đèn báo rẽ.",
+          images: [
+            { src: "/images/attrage-ex-3q.jpg", alt: "Góc 3/4 Attrage" }
+          ]
+        },
+        {
+          subtitle: "Đuôi xe",
+          desc:
+            "Thiết kế đuôi xe bầu bĩnh có nét thực dụng ở phiên bản cũ đã bị loại bỏ hoàn toàn. Thay vào đó là tạo hình góc cạnh mang đến cái nhìn khoẻ khoắn và năng động hơn.",
+          images: [
+            { src: "/images/attrage-ex-rear.jpg", alt: "Đuôi xe Attrage" }
+          ]
+        },
+        {
+          desc:
+            "Cụm đèn hậu được làm mới với đồ hoạ gồm chữ “L” xếp chồng lên nhau khá bắt mắt. Bên cạnh đó, đuôi xe còn được tích hợp thêm cản sau gồm các khu khuếch tán góp phần cải thiện tính khí động hoặc và tăng cường vẻ thể thao.",
+          images: [
+            { src: "/images/attrage-ex-taillight.jpg", alt: "Đèn hậu Attrage" }
+          ]
+        }
       ]
     },
-    {
-      desc:
-        "Bên cạnh đèn pha Halogen thông dụng, Attrage còn được cung cấp công nghệ Bi-LED hiện đại trên các bản cao cấp. Qua đó giúp tăng cường hiệu năng chiếu sáng đáng kể so với bản tiền nhiệm. Đi kèm là dải đèn LED ban ngày được vuốt cong sắc sảo.",
-      images: [
-        { src: "/images/attrage-ex-front-2.jpg", alt: "Cụm đèn trước Attrage" }
+    interiorSection: {
+      title: "NỘI THẤT MITSUBISHI ATTRAGE",
+      blocks: [
+        {
+          desc:
+            "Tương tự như bản cũ, khoang cabin Attrage vẫn ghi điểm tốt nhờ không gian rộng rãi với trục cơ sở đạt 2550 mm. Tuy nhiên, phần nội thất không có quá nhiều thay đổi về mặt thiết kế như phần ngoại hình."
+        },
+        {
+          subtitle: "Khoang lái",
+          images: [
+            { src: "/images/atg-int-front-seats.jpg", alt: "Khoang lái Mitsubishi Attrage" }
+          ],
+          desc:
+            "Một chi tiết mới rất ấn tượng trên Attrage chính là chất liệu giả Carbon được trang trí tại cụm điều khiển trung tâm và khu vực bao quanh nút chỉnh cửa sổ. Điều này giúp khoang lái trông mới mẻ và cao cấp hơn đôi chút so với bản cũ."
+        },
+        {
+          images: [
+            { src: "/images/atg-int-dashboard-wide.jpg", alt: "Bảng táp-lô Attrage" }
+          ],
+          desc:
+            "Khu vực táp lô của Attrage vẫn có thiết kế đơn giản, trông rất gọn gàng và dễ nhìn bởi không xuất hiện nhiều nút bấm vật lý. Tuy nhiên, nhựa cứng là chất liệu chủ đạo đã khiến táp lô chưa thực sự ấn tượng."
+        },
+        {
+          images: [
+            { src: "/images/atg-int-steering.jpg", alt: "Vô lăng Attrage" }
+          ],
+          desc:
+            "Đối diện ghế lái là vô lăng 3 chấu bọc da, có thể điều chỉnh 2 hướng (lên/xuống). Kèm theo đó là các phím bấm tiện lợi tăng cường sự tập trung cho tài xế trong lúc lái xe."
+        },
+        {
+          subtitle: "Khoang hành khách",
+          images: [
+            { src: "/images/atg-int-rear-seats.jpg", alt: "Hàng ghế sau Attrage" }
+          ],
+          desc:
+            "Chất liệu sử dụng cho ghế ngồi trên xe có 2 tuỳ chọn vải hoặc da tổng hợp thông dụng. Không gian để chân ở hàng ghế sau khá thoải mái, hành khách cũng sẽ đỡ mỏi tay khi đi xe nhờ có bệ tỳ tay trung tâm."
+        },
+        {
+          subtitle: "Khoang hành lý",
+          desc:
+            "Với dung tích khoang hành lý 450 lít, chủ nhân có thể mang theo rất nhiều đồ dùng lên Attrage ."
+        },
+        {
+          subtitle: "Tiện nghi – Hiện đại",
+          images: [
+            { src: "/images/atg-int-infotainment.jpg", alt: "Màn hình giải trí Attrage" }
+          ],
+          desc:
+            "Chỉ có phiên bản cao cấp nhất của Attrage mới được trang bị điều hoà tự động, những phiên bản còn lại đều có dạng chỉnh cơ. Bên cạnh đó, các phiên bản đều không có cửa gió cho hàng ghế sau. Do đó, khả năng làm mát của Attrage 2020 vẫn chưa được cải thiện so với trước."
+        },
+        {
+          desc:
+            "Bù lại, hệ thống thông tin giải trí của Attrage rất hiện đại, nếu về đến Việt Nam sẽ rất dễ dàng chinh phục những khách hàng thích công nghệ.\n\nCụ thể gồm có:"
+        },
+        {
+          // danh sách tính năng đúng nguyên văn
+          list: [
+            "Màn hình cảm ứng 7 inch tích hợp hệ thống định vị",
+            "Đàm thoại rảnh tay",
+            "Kết nối điện thoại thông minh, Apple CarPlay, Android Auto",
+            "Kết nối USB, Bluetooth",
+            "Cổng sạc 12V",
+            "Dàn âm thanh 4 loa",
+            "Chìa khóa thông minh, khởi động bằng nút bấm"
+          ]
+        }
       ]
     },
-    {
-      subtitle: "Thân xe",
-      desc:
-        "Nhìn từ bên hông, thay đổi đáng chú ý nhất trên Attrage là bộ vành mới có cấu trúc đa chấu kép sơn màu bạc có kích thước từ 14–15 inch.",
-      images: [
-        { src: "/images/attrage-ex-side.jpg", alt: "Thân xe Attrage" }
-      ]
-    },
-    {
-      desc:
-        "Những chi tiết còn lại gần như được giữ nguyên với đường nhấn gân guốc được vuốt dài từ vòm bánh trước và kết thúc tại đèn hậu. Phía trên là cặp gương chiếu hậu có chức năng gập-chỉnh điện và tích hợp đèn báo rẽ.",
-      images: [
-        { src: "/images/attrage-ex-3q.jpg", alt: "Góc 3/4 Attrage" }
-      ]
-    },
-    {
-      subtitle: "Đuôi xe",
-      desc:
-        "Thiết kế đuôi xe bầu bĩnh có nét thực dụng ở phiên bản cũ đã bị loại bỏ hoàn toàn. Thay vào đó là tạo hình góc cạnh mang đến cái nhìn khoẻ khoắn và năng động hơn.",
-      images: [
-        { src: "/images/attrage-ex-rear.jpg", alt: "Đuôi xe Attrage" }
-      ]
-    },
-    {
-      desc:
-        "Cụm đèn hậu được làm mới với đồ hoạ gồm chữ “L” xếp chồng lên nhau khá bắt mắt. Bên cạnh đó, đuôi xe còn được tích hợp thêm cản sau gồm các khu khuếch tán góp phần cải thiện tính khí động hoặc và tăng cường vẻ thể thao.",
-      images: [
-        { src: "/images/attrage-ex-taillight.jpg", alt: "Đèn hậu Attrage" }
-      ]
-    }
-  ]
-},
-interiorSection: {
-  title: "NỘI THẤT MITSUBISHI ATTRAGE",
-  blocks: [
-    {
-      desc:
-        "Tương tự như bản cũ, khoang cabin Attrage vẫn ghi điểm tốt nhờ không gian rộng rãi với trục cơ sở đạt 2550 mm. Tuy nhiên, phần nội thất không có quá nhiều thay đổi về mặt thiết kế như phần ngoại hình."
-    },
-    {
-      subtitle: "Khoang lái",
-      images: [
-        { src: "/images/atg-int-front-seats.jpg", alt: "Khoang lái Mitsubishi Attrage" }
-      ],
-      desc:
-        "Một chi tiết mới rất ấn tượng trên Attrage chính là chất liệu giả Carbon được trang trí tại cụm điều khiển trung tâm và khu vực bao quanh nút chỉnh cửa sổ. Điều này giúp khoang lái trông mới mẻ và cao cấp hơn đôi chút so với bản cũ."
-    },
-    {
-      images: [
-        { src: "/images/atg-int-dashboard-wide.jpg", alt: "Bảng táp-lô Attrage" }
-      ],
-      desc:
-        "Khu vực táp lô của Attrage vẫn có thiết kế đơn giản, trông rất gọn gàng và dễ nhìn bởi không xuất hiện nhiều nút bấm vật lý. Tuy nhiên, nhựa cứng là chất liệu chủ đạo đã khiến táp lô chưa thực sự ấn tượng."
-    },
-    {
-      images: [
-        { src: "/images/atg-int-steering.jpg", alt: "Vô lăng Attrage" }
-      ],
-      desc:
-        "Đối diện ghế lái là vô lăng 3 chấu bọc da, có thể điều chỉnh 2 hướng (lên/xuống). Kèm theo đó là các phím bấm tiện lợi tăng cường sự tập trung cho tài xế trong lúc lái xe."
-    },
-    {
-      subtitle: "Khoang hành khách",
-      images: [
-        { src: "/images/atg-int-rear-seats.jpg", alt: "Hàng ghế sau Attrage" }
-      ],
-      desc:
-        "Chất liệu sử dụng cho ghế ngồi trên xe có 2 tuỳ chọn vải hoặc da tổng hợp thông dụng. Không gian để chân ở hàng ghế sau khá thoải mái, hành khách cũng sẽ đỡ mỏi tay khi đi xe nhờ có bệ tỳ tay trung tâm."
-    },
-    {
-      subtitle: "Khoang hành lý",
-      desc:
-        "Với dung tích khoang hành lý 450 lít, chủ nhân có thể mang theo rất nhiều đồ dùng lên Attrage ."
-    },
-    {
-      subtitle: "Tiện nghi – Hiện đại",
-      images: [
-        { src: "/images/atg-int-infotainment.jpg", alt: "Màn hình giải trí Attrage" }
-      ],
-      desc:
-        "Chỉ có phiên bản cao cấp nhất của Attrage mới được trang bị điều hoà tự động, những phiên bản còn lại đều có dạng chỉnh cơ. Bên cạnh đó, các phiên bản đều không có cửa gió cho hàng ghế sau. Do đó, khả năng làm mát của Attrage 2020 vẫn chưa được cải thiện so với trước."
-    },
-    {
-      desc:
-        "Bù lại, hệ thống thông tin giải trí của Attrage rất hiện đại, nếu về đến Việt Nam sẽ rất dễ dàng chinh phục những khách hàng thích công nghệ.\n\nCụ thể gồm có:"
-    },
-    {
-      // danh sách tính năng đúng nguyên văn
-      list: [
-        "Màn hình cảm ứng 7 inch tích hợp hệ thống định vị",
-        "Đàm thoại rảnh tay",
-        "Kết nối điện thoại thông minh, Apple CarPlay, Android Auto",
-        "Kết nối USB, Bluetooth",
-        "Cổng sạc 12V",
-        "Dàn âm thanh 4 loa",
-        "Chìa khóa thông minh, khởi động bằng nút bấm"
-      ]
-    }
-  ]
-},
-// ==== VẬN HÀNH – AN TOÀN – THÔNG SỐ – HÌNH ẢNH (Mitsubishi Attrage) ====
+    // ==== VẬN HÀNH – AN TOÀN – THÔNG SỐ – HÌNH ẢNH (Mitsubishi Attrage) ====
 
-performanceSection: {
-  title: "VẬN HÀNH MITSUBISHI ATTRAGE",
-  blocks: [
-    {
-      html: `
+    performanceSection: {
+      title: "VẬN HÀNH MITSUBISHI ATTRAGE",
+      blocks: [
+        {
+          html: `
         <p>Attrage tiếp tục là mẫu sedan hạng B có sức mạnh động cơ yếu nhất phân khúc khi sử dụng cấu hình cũ là Xăng 1.2L 3 xy lanh, 12 van, DOHC. Cỗ máy này chỉ cho ra công suất tối đa 78 mã lực, mô-men xoắn cực đại 100 Nm. Đi kèm là 2 tùy chọn hộp số gồm số sàn 5 cấp hoặc vô cấp CVT kết hợp cùng hệ dẫn động cầu trước.</p>
       `,
-      images: [{ src: "/images/att-perf-engine.jpg", alt: "Khoang động cơ Mitsubishi Attrage" }]
-    },
-    {
-      html: `
+          images: [{ src: "/images/att-perf-engine.jpg", alt: "Khoang động cơ Mitsubishi Attrage" }]
+        },
+        {
+          html: `
         <p>Với sức mạnh động cơ "khiêm tốn", đôi lúc chủ nhân sẽ cảm thấy khá bực bội với khả năng tăng tốc chậm và ì ạch của xe Ô tô Attrage 2020. Bù lại xe hoạt động rất bền bỉ và rất tiết kiệm xăng với mức tiêu hao nhiên liệu trung bình đạt 3,9L/100km. Do đó, Attrage thường được các bác tài lựa chọn để chạy dịch vụ.</p>
         <p>Bên cạnh đó, hiệu quả giảm xóc của Attrage cũng được đánh giá cao trong phân khúc với hệ thống treo trước/sau MacPherson với lò xo cuộn/thanh xoắn. Đi kèm là 2 tùy chọn lốp dày có thông số 175/65R14 và 185/55R15.</p>
         <p>Bên cạnh đó, Attrage còn có lợi thế khả năng "leo lề" với khoảng sáng gầm cao 160–170 mm, "nhỉnh" hơn nhiều đối thủ trong phân khúc.</p>
       `
-    }
-  ]
-},
+        }
+      ]
+    },
 
-safetySection: {
-  title: "AN TOÀN MITSUBISHI ATTRAGE",
-  blocks: [
-    {
-      html: `
+    safetySection: {
+      title: "AN TOÀN MITSUBISHI ATTRAGE",
+      blocks: [
+        {
+          html: `
         <p>Tương tự như xe Mirage, Attrage phiên bản mới cũng được trang bị hệ thống giảm thiểu tai nạn khi đạp nhầm chân ga hiện đại. Hệ thống này sẽ hoạt động dựa vào radar, khi xác định được xe phía trước cách 4m mà người lái lại nhấn ga mạnh, hệ thống sẽ tự động can thiệp để giảm tốc độ.</p>
         <p>Ngoài ra, xe còn có rất nhiều những tính năng an toàn khác như:</p>
       `
-    },
-    {
-      list: [
-        "Cruise Control",
-        "Camera lùi",
-        "Hệ thống cảnh báo và giảm thiểu va chạm phía trước",
-        "Hệ thống giảm thiểu sai lệch cảm biến radar",
-        "Chống bó cứng phanh",
-        "Phân phối lực phanh điện tử",
-        "Hỗ trợ phanh khẩn cấp",
-        "Kiểm soát ổn định",
-        "Kiểm soát lực kéo",
-        "Hỗ trợ khởi hành ngang dốc",
-        "2 túi khí",
-        "Ghế trẻ em ISOFIX",
-        "Cruise control"
+        },
+        {
+          list: [
+            "Cruise Control",
+            "Camera lùi",
+            "Hệ thống cảnh báo và giảm thiểu va chạm phía trước",
+            "Hệ thống giảm thiểu sai lệch cảm biến radar",
+            "Chống bó cứng phanh",
+            "Phân phối lực phanh điện tử",
+            "Hỗ trợ phanh khẩn cấp",
+            "Kiểm soát ổn định",
+            "Kiểm soát lực kéo",
+            "Hỗ trợ khởi hành ngang dốc",
+            "2 túi khí",
+            "Ghế trẻ em ISOFIX",
+            "Cruise control"
+          ]
+        },
+        {
+          images: [{ src: "/images/att-safety-hero.jpg", alt: "Tính năng an toàn trên Mitsubishi Attrage" }]
+        }
       ]
     },
-    {
-      images: [{ src: "/images/att-safety-hero.jpg", alt: "Tính năng an toàn trên Mitsubishi Attrage" }]
-    }
-  ]
-},
 
-specsSection: {
-  title: "THÔNG SỐ MITSUBISHI ATTRAGE",
-  blocks: [
-    {
-      table: [
-        ["Tên xe", "Mitsubishi Attrage"],
-        ["Số chỗ ngồi", "05"],
-        ["Kiểu xe", "Sedan"],
-        ["Kích thước DxRxC (mm)", "4305 x 1607 x 1505 mm"],
-        ["Chiều dài cơ sở", "2550 mm"],
-        ["Động cơ", "Xăng 1.2L 3 xy lanh, 12 van, DOHC"],
-        ["Dung tích công tác", "1.193cc"],
-        ["Dung tích bình nhiên liệu", "35L"],
-        ["Loại nhiên liệu", "Xăng"],
-        ["Công suất cực đại (mã lực)", "78 mã lực tại 6000 vòng/phút"],
-        ["Mô-men xoắn cực đại (Nm)", "100 Nm tại 4000 vòng/phút"],
-        ["Hộp số", "Số sàn 5 cấp hoặc vô cấp CVT"],
-        ["Hệ dẫn động", "Cầu trước"],
-        ["Treo trước/sau", "MacPherson với lò xo cuộn/thanh xoắn"],
-        ["Phanh trước/sau", "Đĩa thông gió/tang trống"],
-        ["Khoảng sáng gầm xe", "160–170 mm"],
-        ["Trợ lực lái", "Điện"],
-        ["Cỡ mâm", "14–15 inch"]
+    specsSection: {
+      title: "THÔNG SỐ MITSUBISHI ATTRAGE",
+      blocks: [
+        {
+          table: [
+            ["Tên xe", "Mitsubishi Attrage"],
+            ["Số chỗ ngồi", "05"],
+            ["Kiểu xe", "Sedan"],
+            ["Kích thước DxRxC (mm)", "4305 x 1607 x 1505 mm"],
+            ["Chiều dài cơ sở", "2550 mm"],
+            ["Động cơ", "Xăng 1.2L 3 xy lanh, 12 van, DOHC"],
+            ["Dung tích công tác", "1.193cc"],
+            ["Dung tích bình nhiên liệu", "35L"],
+            ["Loại nhiên liệu", "Xăng"],
+            ["Công suất cực đại (mã lực)", "78 mã lực tại 6000 vòng/phút"],
+            ["Mô-men xoắn cực đại (Nm)", "100 Nm tại 4000 vòng/phút"],
+            ["Hộp số", "Số sàn 5 cấp hoặc vô cấp CVT"],
+            ["Hệ dẫn động", "Cầu trước"],
+            ["Treo trước/sau", "MacPherson với lò xo cuộn/thanh xoắn"],
+            ["Phanh trước/sau", "Đĩa thông gió/tang trống"],
+            ["Khoảng sáng gầm xe", "160–170 mm"],
+            ["Trợ lực lái", "Điện"],
+            ["Cỡ mâm", "14–15 inch"]
+          ]
+        }
+      ]
+    },
+
+    gallerySection: {
+      title: "HÌNH ẢNH MITSUBISHI ATTRAGE",
+      blocks: [
+        {
+          images: [
+            { src: "/images/att-safety-hero.jpg", alt: "Mitsubishi Attrage trong showroom" }
+          ]
+        }
       ]
     }
-  ]
-},
-
-gallerySection: {
-  title: "HÌNH ẢNH MITSUBISHI ATTRAGE",
-  blocks: [
-    {
-      images: [
-        { src: "/images/att-safety-hero.jpg", alt: "Mitsubishi Attrage trong showroom" }
-      ]
-    }
-  ]
-}
 
   },
   {
     slug: "new-outlander",
-    name: "NEW OUTLANDER",
+    name: "MITSUBISHI OUTLANDER",
     fuel: "8.48L/100Km",
     price: "825,000,000 ₫",
     image: "/images/outlander.png",
+    priceTable: [
+      { version: "Mitsubishi Outlander 2.0 CVT New", price: "825 triệu đ" },
+      { version: "Mitsubishi Outlander 2.0 CVT Premium New", price: "950 triệu đ" }
+    ],
+    // ===== TỔNG QUAN (đúng cấu trúc renderFeatureSection bạn đang dùng)
+    overviewSection: {
+      title: "TỔNG QUAN MITSUBISHI OUTLANDER",
+      blocks: [
+        {
+          // Đoạn mở đầu — giữ nguyên ý đầy đủ như bố cục trong ảnh
+          html: `
+          <p>Kế thừa những ưu điểm nổi bật từ phiên bản trước, Mitsubishi Outlander 2022 tiếp tục là mẫu xe chiến lược với nhiều cải tiến về ngoại thất, tiện nghi, các tính năng an toàn chủ động thông minh cùng khả năng vận hành vượt trội trong phân khúc.</p>
+        `
+        },
+        {
+          // Video TVC — thay đúng ID YouTube của bạn nếu khác
+          videoId: "hsMHP8TOoDw"
+        },
+        {
+          // Đoạn mô tả sau video — không lược bớt chữ
+          html: `
+          <p>Theo đó, Outlander 2022 sẽ có 2 phiên bản 2.0 CVT và 2.0 CVT Premium với điểm nhấn mới về ngoại thất cũng như nội thất. Đặc biệt, các phiên bản mới còn được trang bị gói an toàn chủ động thông minh cao cấp Mitsubishi e-Assist với hàng loạt tính năng hiện đại, tiện ích và thông minh như: cảnh báo điểm mù, cảnh báo phương tiện cắt ngang phía sau, cảnh báo lệch làn đường, gương chiếu hậu chỉnh/gập điện, đèn pha tự động, cảm biến bật/tắt đèn chiếu sáng… cùng hệ thống kiểm soát chân ga khi đạp nhầm chân ga, mang lại sự an tâm trên mọi hành trình.</p>
+        `
+        }
+      ]
+    },
+    exteriorSection: {
+      title: "NGOẠI THẤT MITSUBISHI OUTLANDER",
+      blocks: [
+        {
+          html: `
+        <p>Ở ngoại thất, điểm nhấn đáng chú ý trên Outlander thế hệ mới là mặt lưới tản nhiệt được thiết kế lại theo dạng tổ ong trông thể thao và phong cách hơn, trong khi ở thế hệ cũ chỉ là 2 thanh ngang đơn giản. Những đường dập nổi trên nắp ca-pô kết hợp với hai thanh ngang mạ chrome cỡ lớn trên lưới tản nhiệt nối liền cụm đèn chiếu sáng.</p>
+        <p>Ở ngoại thất, điểm nhấn đáng chú ý trên Outlander thế hệ mới là mặt lưới tản nhiệt được thiết kế lại theo dạng tổ ong trông thể thao và phong cách hơn, trong khi ở thế hệ cũ chỉ là 2 thanh ngang đơn giản. Những đường dập nổi trên nắp ca-pô kết hợp với hai thanh ngang mạ chrome cỡ lớn trên lưới tản nhiệt nối liền cụm đèn chiếu sáng.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-1.jpg", alt: "Mặt trước Outlander" }
+          ]
+        },
+        {
+          html: `
+        <p>Phiên bản 2.0 CVT có đèn pha dạng Halogen, trong khi bản 2.0 CVT Premium sử dụng hệ thống chiếu sáng full LED có tích hợp rửa đèn. Đèn LED chạy ban ngày được trang bị trên tất cả các phiên bản. Ngoài ra 2 phiên bản này còn có đèn pha tự động và gạt mưa tự động, vốn không trang bị trên thế hệ trước.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-2.jpg", alt: "Cận cảnh cụm đèn và lưới tản nhiệt" }
+          ]
+        },
+        {
+          html: `
+        <p>Nhìn từ bên hông, các đường gân dập nổi kết hợp với dải kim loại sáng kéo dài từ trụ A và ôm trọn đến trụ D.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-3.jpg", alt: "Thân xe Outlander nhìn ngang" }
+          ]
+        },
+        {
+          html: `
+        <p>Điểm nhấn nổi bật nhất ở phần hông xe nằm ở bộ mâm đúc hợp kim đa chấu 18 inch thiết kế 8 chấu 2 tone màu thể thao hơn trước.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-4.jpg", alt: "Mâm xe Outlander 18 inch" }
+          ]
+        },
+        {
+          html: `
+        <p>Phiên bản 2.0 CVT có đèn pha dạng Halogen, trong khi bản 2.0 CVT Premium sử dụng hệ thống chiếu sáng full LED có tích hợp rửa đèn. Đèn LED chạy ban ngày được trang bị trên tất cả các phiên bản. Ngoài ra 2 phiên bản này còn có đèn pha tự động và gạt mưa tự động, vốn không trang bị trên thế hệ trước.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-5.jpg", alt: "Đuôi xe Outlander góc chéo" }
+          ]
+        },
+        {
+          html: `
+        <p>Nhìn từ bên hông, các đường gân dập nổi kết hợp với dải kim loại sáng kéo dài từ trụ A và ôm trọn đến trụ D.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-6.jpg", alt: "Cận cảnh đầu xe nhìn nghiêng" }
+          ]
+        },
+        {
+          html: `
+        <p>Điểm nhấn nổi bật nhất ở phần hông xe nằm ở bộ mâm đúc hợp kim đa chấu 18 inch thiết kế 8 chấu 2 tone màu thể thao hơn trước.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-7.jpg", alt: "Thân xe toàn cảnh trong showroom" }
+          ]
+        },
+        {
+          html: `
+        <p>Điểm nhấn nổi bật nhất ở phần hông xe nằm ở bộ mâm đúc hợp kim đa chấu 18 inch thiết kế 8 chấu 2 tone màu thể thao hơn trước.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-8.jpg", alt: "Cận cảnh lốp/mâm Outlander" }
+          ]
+        },
+        {
+          html: `
+        <p>Phía sau của Outlander không có nhiều thay đổi. Đèn hậu dạng LED, xe được bổ sung trang bị tiêu chuẩn cánh gió thể thao, cản sau được thiết kế mới tạo cảm giác đầy đặn và cứng cáp hơn.</p>
+      `,
+          images: [
+            { src: "/images/out-ex-9.jpg", alt: "Đuôi xe Outlander" }
+          ]
+        }
+      ]
+    },
+    interiorSection: {
+      title: "NỘI THẤT MITSUBISHI OUTLANDER",
+      blocks: [
+        {
+          // Mở đầu + ảnh táp-lô chính diện
+          desc:
+            "Cách bố trí bên trong cabin không thay đổi nhưng có thêm các trang bị, tính năng mới. Hai phiên bản đều có chức năng đóng mở 1 chạm trên tất cả các cửa, trong khi trước đây chỉ có ở cửa sổ ghế lái.",
+          images: [
+            {
+              src: "/images/out-in-1.jpg", // Ảnh tương ứng file 5481be98-....png
+              alt: "Khoang lái Mitsubishi Outlander",
+              caption:
+                "Ghế lái bọc da, chỉnh điện 10 hướng bao gồm hệ thống chỉnh điện đệm lưng. Bảng tablo và cụm điều khiển trung tâm được thiết kế hướng về phía người lái, giúp dễ dàng thao tác hơn."
+            }
+          ]
+        },
+        {
+          // Ảnh góc chéo khoang trước
+          images: [
+            {
+              src: "/images/out-in-2.jpg", // Ảnh tương ứng file f132d024-....png
+              alt: "Khoang trước nhìn từ ghế phụ Mitsubishi Outlander",
+              caption:
+                "Cả 2 phiên bản Outlander được trang bị lẫy chuyển số trên vô lăng. Những trang bị các tiện nghi mới khác bao gồm cốp sau đóng mở điện, hệ thống điều hòa tự động hai vùng độc lập cùng cửa gió điều hòa, 2 cổng sạc USB ở hàng ghế thứ 2."
+            }
+          ]
+        },
+        {
+          // Ảnh hàng ghế trước cận cảnh
+          images: [
+            {
+              src: "/images/out-in-3.jpg", // Ảnh tương ứng file 32d8c3b5-....png
+              alt: "Hàng ghế trước Outlander"
+            }
+          ]
+        },
+        {
+          // Ảnh hàng ghế thứ ba + chú thích cách âm
+          images: [
+            {
+              src: "/images/out-in-4.jpg", // Ảnh tương ứng file 59989b41-....png
+              alt: "Hàng ghế thứ ba Mitsubishi Outlander",
+              caption:
+                "Khả năng cách âm cabin cũng được cải thiện với kính chắn gió phía trước dày kết hợp với nhiều lớp hấp thụ âm thanh, ngăn chặn tiếng ồn bên ngoài và giúp cho cabin yên tĩnh."
+            }
+          ]
+        },
+        {
+          // Ảnh hàng ghế trước cận cảnh
+          images: [
+            {
+              src: "/images/out-in-5.jpg", // Ảnh tương ứng file 32d8c3b5-....png
+              alt: "Hàng ghế trước Outlander"
+            }
+          ]
+        },
+      ]
+    },
+    // === OUTLANDER: VẬN HÀNH – AN TOÀN – THÔNG SỐ – HÌNH ẢNH
+    performanceSection: {
+      title: "VẬN HÀNH MITSUBISHI OUTLANDER",
+      blocks: [
+        {
+          desc:
+            "Có thể thấy những nâng cấp mới trên Outlander tập trung nhiều bản 2.0 CVT Premium, trong khi bản 2.0 CVT vẫn khá ít và ở mức cơ bản. Mitsubishi Outlander 2020 được trang bị động cơ xăng 2.0L MIVEC, có công suất 145 mã lực và mô-men xoắn 196 Nm. Hộp số tự động vô cấp CVT giả lập 6 cấp số.",
+          images: [
+            { src: "/images/out-perf-1.jpg", alt: "Động cơ Outlander 2.0L MIVEC" }
+          ]
+        }
+      ]
+    },
+
+    safetySection: {
+      title: "AN TOÀN MITSUBISHI OUTLANDER",
+      blocks: [
+        {
+          desc:
+            "Trang bị an toàn mới trên Mitsubishi Outlander CVT Premium gồm có 7 túi khí, phanh tay điện tử và giữ phanh tự động, cảm biến lùi, cảnh báo điểm mù, cảnh báo phương tiện cắt ngang khi lùi. Riêng bản 2.0 CVT chỉ có phanh tay điện tử và giữ phanh tự động là điểm mới. Những công nghệ an toàn này không có trên đời cũ, trong khi các đối thủ khác đã có từ lâu."
+        }
+      ]
+    },
+
+    specsSection: {
+      title: "THÔNG SỐ MITSUBISHI OUTLANDER",
+      blocks: [
+        {
+          table: [
+            ["Tên xe", "Mitsubishi Outlander"],
+            ["Số chỗ ngồi", "07"],
+            ["Kiểu xe", "Crossover"],
+            ["Xuất xứ", "Lắp ráp"],
+            ["Kích thước DxRxC", "4695 x 1810 x 1710 mm"],
+            ["Chiều dài cơ sở", "2670 mm"],
+            ["Động cơ", "Xăng 2.0L và Xăng 2.4L"],
+            ["Dung tích công tác", "2.0L và 2.4L"],
+            ["Loại nhiên liệu", "Xăng"],
+            ["Công suất cực đại", "145-167 mã lực"],
+            ["Mô-men xoắn cực đại", "196-222 Nm"],
+            ["Hộp số", "Vô cấp CVT"],
+            ["Hệ dẫn động", "Cầu trước hoặc 2 cầu"],
+            ["Treo trước/sau", "MacPherson với thanh cân bằng/đa liên kết với thanh cân bằng"],
+            ["Trợ lực lái", "Điện"],
+            ["Cỡ mâm", "18 inch"],
+            ["Khoảng sáng gầm xe", "190 mm"]
+          ]
+        }
+      ]
+    },
+
+    gallerySection: {
+      title: "HÌNH ẢNH MITSUBISHI OUTLANDER",
+      blocks: [
+        {
+
+          images: [
+            { src: "/images/out-ex-1.jpg", alt: "Outlander mặt trước" },
+
+          ]
+        }
+      ]
+    },
+
   },
   {
     slug: "triton-2wd-at-glx",
