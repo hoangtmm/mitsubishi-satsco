@@ -19,9 +19,8 @@ const Header = () => {
   }, []);
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 bg-black text-white px-4 transition-all duration-300 ${
-        atTop ? "py-3" : "py-1 shadow-lg"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 bg-black text-white px-4 transition-all duration-300 ${atTop ? "py-3" : "py-1 shadow-lg"
+        }`}
     >
       <div className="max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300">
         {/* Logo */}
@@ -42,101 +41,86 @@ const Header = () => {
           >
             TRANG CHỦ
           </span>
-          <Link 
-  to="/gioi-thieu" 
-  className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all"
->
-  GIỚI THIỆU
-</Link>
-
-          <div className="relative group">
-            <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-block">CÁC DÒNG XE</span>
-            <div className="absolute hidden group-hover:block bg-black text-white mt-1 p-2 shadow-lg whitespace-nowrap z-50">
-              <div className="hover:bg-gray-700 px-4 py-1 rounded">Xpander</div>
-              <div className="hover:bg-gray-700 px-4 py-1 rounded">Pajero Sport</div>
-              <div className="hover:bg-gray-700 px-4 py-1 rounded">Attrage</div>
-            </div>
-          </div>
-         <Link
-  to="/bang-gia-xe"
-  className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all"
->
-  BẢNG GIÁ XE
-</Link>
+          <Link
+            to="/gioi-thieu"
+            className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all"
+          >
+            GIỚI THIỆU
+          </Link>
+          <Link
+            to="/bang-gia-xe"
+            className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all"
+          >
+            BẢNG GIÁ XE
+          </Link>
           <div className="relative group inline-block">
             <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-flex items-center gap-1">
               XE MITSUBISHI <FaChevronDown className="text-xs mt-[1px]" />
             </span>
             {/* Dropdown content */}
             <div className="absolute left-1/2 transform -translate-x-1/2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-white text-black mt-2 shadow-lg p-4 z-50 w-[1000px] flex-wrap justify-start flex">
-             {[
-  {
-    slug: "all-new-xforce",
-    name: "Mitsubishi Xforce",
-    price: "599.000.000 VNĐ",
-    image: "/images/Mitsubishi_Xforce.jpg",
-  },
-  {
-    slug: "xpander-cross-2025",
-    name: "Xpander Cross 2025",
-    price: "698.000.000 VNĐ",
-    image: "/images/Xpander_Cross_2025.jpg",
-  },
-  {
-    slug: "mitsubishi-attrage",
-    name: "Mitsubishi Attrage",
-    price: "380.000.000 VNĐ",
-    image: "/images/Mitsubishi_Attrage.jpg",
-  },
-  {
-    slug: "mitsubishi-xpander-2025",
-    name: "Mitsubishi Xpander 2025",
-    price: "560.000.000 VNĐ",
-    image: "/images/Mitsubishi_Xpander_2025.jpg",
-  },
-  {
-    slug: "mitsubishi-triton",
-    name: "Mitsubishi Triton",
-    price: "650.000.000 VNĐ",
-    image: "/images/Mitsubishi_Triton.jpg",
-  },
-  {
-    slug: "mitsubishi-outlander",
-    name: "Mitsubishi Outlander",
-    price: "825.000.000 VNĐ",
-    image: "/images/Mitsubishi_Outlander.jpg",
-  },
-  {
-    slug: "mitsubishi-pajero-sport",
-    name: "Mitsubishi Pajero Sport",
-    price: "650.000.000 VNĐ",
-    image: "/images/Mitsubishi_Pajero_Sport.jpg",
-  },
-].map((car, index) => (
-  <Link
-    to={`/${car.slug}`}
-    key={index}
-    className="w-[180px] p-2 hover:scale-105 transition duration-300 block"
-  >
-    <img
-      src={car.image}
-      alt={car.name}
-      className="rounded w-full h-auto object-cover"
-    />
-    <p className="font-bold mt-2 text-sm">{car.name}</p>
-    <p className="text-red-600 text-xs">Giá: từ {car.price}</p>
-  </Link>
-))}
+              {[
+                {
+                  slug: "all-new-xforce",
+                  name: "Mitsubishi Xforce",
+                  price: "599.000.000 VNĐ",
+                  image: "/images/Mitsubishi_Xforce.jpg",
+                },
+                {
+                  slug: "xpander-cross",
+                  name: "Xpander Cross 2025",
+                  price: "698.000.000 VNĐ",
+                  image: "/images/Xpander_Cross_2025.jpg",
+                },
+                {
+                  slug: "new-attrage",
+                  name: "Mitsubishi Attrage",
+                  price: "380.000.000 VNĐ",
+                  image: "/images/Mitsubishi_Attrage.jpg",
+                },
+                {
+                  slug: "triton-4wd-at-athlete",
+                  name: "Mitsubishi Triton",
+                  price: "650.000.000 VNĐ",
+                  image: "/images/Mitsubishi_Triton.jpg",
+                },
+                {
+                  slug: "new-outlander",
+                  name: "Mitsubishi Outlander",
+                  price: "825.000.000 VNĐ",
+                  image: "/images/Mitsubishi_Outlander.jpg",
+                },
+                {
+                  slug: "new-pajero-sport",
+                  name: "Mitsubishi Pajero Sport",
+                  price: "650.000.000 VNĐ",
+                  image: "/images/Mitsubishi_Pajero_Sport.jpg",
+                },
+              ].map((car, index) => (
+                <Link
+                  to={`/${car.slug}`}
+                  key={index}
+                  className="w-[180px] p-2 hover:scale-105 transition duration-300 block"
+                >
+                  <img
+                    src={car.image}
+                    alt={car.name}
+                    className="rounded w-full h-auto object-cover"
+                  />
+                  <p className="font-bold mt-2 text-sm">{car.name}</p>
+                  <p className="text-red-600 text-xs">Giá: từ {car.price}</p>
+                </Link>
+              ))}
 
             </div>
           </div>
           <a href="/thu-tuc-tra-gop" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">THỦ TỤC TRẢ GÓP</a>
-          <a
-            href="#"
+          <Link
+            to="/tin-tuc"
             className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all header-tintuc"
           >
             TIN TỨC
-          </a>
+          </Link>
         </nav>
         {/* Hotline */}
         <div className="hidden md:flex items-center">

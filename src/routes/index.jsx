@@ -7,6 +7,8 @@ import InstallmentPage from "@/pages/InstallmentPage";
 import CarDetailPage from "@/pages/CarDetailPage";
 import About from "@/pages/About";
 import PriceList from "@/pages/PriceList";
+import News from "@/pages/News";
+import NewsDetail from "@/pages/NewsDetail";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,8 @@ const router = createBrowserRouter([
       { path: "/:slug", element: <CarDetailPage /> },
       { path: "gioi-thieu", element: <About /> },
       { path: "bang-gia-xe", element: <PriceList /> },
+      { path: "tin-tuc", element: <News /> },
+      { path: "tin-tuc/:slug", element: <NewsDetail /> },
     ],
   },
 ]);
