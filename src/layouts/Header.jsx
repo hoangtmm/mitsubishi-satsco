@@ -42,6 +42,13 @@ const Header = () => {
           >
             TRANG CHỦ
           </span>
+          <Link 
+  to="/gioi-thieu" 
+  className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all"
+>
+  GIỚI THIỆU
+</Link>
+
           <div className="relative group">
             <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-block">CÁC DÒNG XE</span>
             <div className="absolute hidden group-hover:block bg-black text-white mt-1 p-2 shadow-lg whitespace-nowrap z-50">
@@ -118,7 +125,6 @@ const Header = () => {
 
             </div>
           </div>
-          <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">KHUYẾN MÃI</a>
           <a href="/thu-tuc-tra-gop" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">THỦ TỤC TRẢ GÓP</a>
           <a
             href="#"
