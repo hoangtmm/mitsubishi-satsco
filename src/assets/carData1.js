@@ -1404,13 +1404,7 @@ Các phiên bản:
     },
 
   },
-  {
-    slug: "triton-2wd-at-glx",
-    name: "TRITON 2WD AT GLX",
-    fuel: "7.2L/100Km",
-    price: "655,000,000 ₫",
-    image: "/images/triton-glx.png",
-  },
+ 
   {
     slug: "triton-4wd-at-athlete",
     name: "MITSUBISHI TRITON",

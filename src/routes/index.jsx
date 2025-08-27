@@ -4,8 +4,9 @@ import Home from "@/pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
 import InstallmentPage from "@/pages/InstallmentPage";
-import CarDetailPage from "@/pages/CarDetailPage"; 
+import CarDetailPage from "@/pages/CarDetailPage";
 import About from "@/pages/About";
+import PriceList from "@/pages/PriceList";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,12 +17,13 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-        {
+      {
         path: "/thu-tuc-tra-gop",
-        element: <InstallmentPage  />,
+        element: <InstallmentPage />,
       },
-        { path: "/:slug", element: <CarDetailPage /> },
-          { path: "gioi-thieu", element: <About /> },
+      { path: "/:slug", element: <CarDetailPage /> },
+      { path: "gioi-thieu", element: <About /> },
+      { path: "bang-gia-xe", element: <PriceList /> },
     ],
   },
 ]);
