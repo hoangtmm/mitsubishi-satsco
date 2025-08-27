@@ -4,7 +4,7 @@ import PriceCard from "@/components/PriceCard";
 
 const data = [
   {
-    slug: "all-new-xforce",            // <-- thêm slug
+    slug: "all-new-xforce",            
     name: "Mitsubishi Xforce",
     image: "/images/xforce1.jpg",
     variants: [
@@ -15,9 +15,9 @@ const data = [
     ],
   },
     {
-    slug: "all-new-xpander",               // ⬅️ đuôi link như bạn yêu cầu
+    slug: "all-new-xpander",              
     name: "Mitsubishi Xpander 2025",
-    image: "/images/xpander.jpg",          // đặt ảnh ở public/images/xpander.jpg
+    image: "/images/xpander.jpg",          
     variants: [
       { label: "NEW XPANDER MT",         priceMil: 560 },
       { label: "NEW XPANDER AT",         priceMil: 598 },
