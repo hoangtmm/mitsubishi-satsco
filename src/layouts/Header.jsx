@@ -57,7 +57,12 @@ const Header = () => {
               <div className="hover:bg-gray-700 px-4 py-1 rounded">Attrage</div>
             </div>
           </div>
-          <a href="#" className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">BẢNG GIÁ XE</a>
+         <Link
+  to="/bang-gia-xe"
+  className="px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all"
+>
+  BẢNG GIÁ XE
+</Link>
           <div className="relative group inline-block">
             <span className="cursor-pointer px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all inline-flex items-center gap-1">
               XE MITSUBISHI <FaChevronDown className="text-xs mt-[1px]" />
