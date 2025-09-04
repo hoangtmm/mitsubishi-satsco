@@ -20,7 +20,15 @@ const DealerInfoSection = () => (
       <div className="flex-1 flex flex-col justify-start">   {/* Sửa tại đây: justify-center => justify-start */}
         <h2 className="text-3xl font-extrabold text-red-600 mb-4">GIỚI THIỆU ĐẠI LÝ</h2>
         <p className="mb-4 text-base text-gray-800">
-          <b className="text-black"> Mitsubishi Motors Tân Bình</b> với vị trí đại lý thuận lợi, tiêu chí đặt khách hàng là nguồn sống. Đại lý luôn có nhiều chương trình mua xe hấp dẫn, quà tặng đặc biệt và mạng lưới liên kết ngân hàng lớn mạnh tại miền Nam. Mitsubishi Tân Bình luôn cam kết giúp khách hàng có được chiếc xe ưng ý nhất
+          <a 
+  href="https://mitsubishisaigon.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="text-black hover:underline"
+>
+  <b>Mitsubishi Motors Tân Bình</b>
+</a>
+ với vị trí đại lý thuận lợi, tiêu chí đặt khách hàng là nguồn sống. Đại lý luôn có nhiều chương trình mua xe hấp dẫn, quà tặng đặc biệt và mạng lưới liên kết ngân hàng lớn mạnh tại miền Nam. Mitsubishi Tân Bình luôn cam kết giúp khách hàng có được chiếc xe ưng ý nhất
         </p>
         <h3 className="font-bold text-lg mb-2">LIÊN HỆ</h3>
         <ul className="space-y-1 text-base">
@@ -28,7 +36,7 @@ const DealerInfoSection = () => (
             <span className="font-bold">Địa chỉ:</span> <span className="font-bold">1A Hồng Hà, Phường 2, Quận Tân Bình, TP.HCM</span>
           </li>
           <li>
-            <span className="font-bold">Website:</span> <a href="http://mitsubishivietnam.net" className="text-blue-700 hover:underline">www.mitsubishivietnam.net</a>
+            <span className="font-bold">Website:</span> <a href="https://mitsubishisaigon.com/" className="text-blue-700 hover:underline">www.mitsubishisaigon.com</a>
           </li>
           <li>
             <span className="font-bold">Email:</span> <a href="mailto:nguyenngocminhquan0311@gmail.com" className="text-blue-700 hover:underline">nguyenngocminhquan0311@gmail.com</a>
