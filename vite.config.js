@@ -17,6 +17,9 @@ export default defineConfig({
     allowedHosts: ['test.vps-sep490.io.vn'], 
   },
    preview: {
-    allowedHosts: ['study.vps-sep490.io.vn']
-  }
+  allowedHosts: [
+    'study.vps-sep490.io.vn',
+    'mitsubishisaigon.com'
+  ]
+}
 });
