@@ -25,7 +25,7 @@ export default function QuickQuoteModal() {
     setLoading(true);
     setSuccess(false);
     try {
-      const res = await fetch("https://mitsubishiapi.onrender.com/api/QuickQuote", {
+      const res = await fetch("https://api.mitsubishisaigon.com/api/QuickQuote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName, phone, carModel }),
