@@ -26,9 +26,9 @@ const DealerInfoSection = () => (
   rel="noopener noreferrer"
   className="text-black hover:underline"
 >
-  <b>Mitsubishi Motors Tân Bình</b>
+  <b>Mitsubishi Motors Tân Bình </b>
 </a>
- với vị trí đại lý thuận lợi, tiêu chí đặt khách hàng là nguồn sống. Đại lý luôn có nhiều chương trình mua xe hấp dẫn, quà tặng đặc biệt và mạng lưới liên kết ngân hàng lớn mạnh tại miền Nam. Mitsubishi Tân Bình luôn cam kết giúp khách hàng có được chiếc xe ưng ý nhất
+  với vị trí đại lý thuận lợi, tiêu chí đặt khách hàng là nguồn sống. Đại lý luôn có nhiều chương trình mua xe hấp dẫn, quà tặng đặc biệt và mạng lưới liên kết ngân hàng lớn mạnh tại miền Nam. Mitsubishi Tân Bình luôn cam kết giúp khách hàng có được chiếc xe ưng ý nhất
         </p>
         <h3 className="font-bold text-lg mb-2">LIÊN HỆ</h3>
         <ul className="space-y-1 text-base">
