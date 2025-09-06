@@ -479,7 +479,108 @@ const newsArticles = [
         "Trong cuộc gặp gỡ với giới truyền thông Úc, Masuda xác nhận Triton mới là một dự án do Mitsubishi thực hiện “từ A đến Z” – bao gồm khung gầm dạng bậc thang, động cơ turbodiesel và toàn bộ quá trình thiết kế, phát triển. Chuyên gia này cũng cho biết sự hỗ trợ của hai thương hiệu còn lại trong liên minh Renault–Nissan–Mitsubishi chỉ dừng ở mức “trao đổi một số thông tin”."
     }
   ]
+},
+{
+  "slug": "mitsubishi-satsco-ctkm-dich-vu-moi",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "[Mitsubishi Satsco] – CTKM Dịch Vụ Mới"
+    },
+    {
+      "type": "p",
+      "text": "Từ 15/07 đến 31/08/2025, Mitsubishi Satsco triển khai chương trình khuyến mãi dịch vụ dành cho tất cả khách hàng, như một lời tri ân và khuyến khích Quý khách dành thời gian chăm sóc “xế yêu” để đảm bảo mỗi chuyến đi luôn an toàn – êm ái – tiết kiệm chi phí."
+    },
+    {
+      "type": "h3",
+      "text": "1. Ưu đãi dịch vụ nổi bật"
+    },
+    {
+      "type": "h4",
+      "text": "Miễn phí hoàn toàn"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "01 lọc nhớt cho khách hàng quay lại sau 12 tháng.",
+        "Kiểm tra tổng quát, xóa lỗi, nội soi giàn lạnh, kiểm tra xe trước khi đăng kiểm.",
+        "Rửa xe & hút bụi cho mọi dòng xe khi vào xưởng."
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "Giảm giá hấp dẫn"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Giảm 30%: Đánh bóng thân xe, vệ sinh khoang động cơ, tẩy ố kính.",
+        "Giảm 20%: Dầu động cơ cho xe biển số vàng (kinh doanh vận tải, áp dụng 15/05 – 30/09/2025), gói đánh bóng thân xe/vệ sinh khoang động cơ/tẩy ố kính, cân mâm, bấm chì.",
+        "Giảm 15%: Gói vệ sinh giàn lạnh + tặng sáp thơm."
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "Sửa chữa thân vỏ"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Xe không bảo hiểm: Giảm 20% tiền công + 10% vật tư.",
+        "Xe có bảo hiểm: Tặng 500.000đ phiếu miễn thường."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "2. Quà tặng tri ân khách hàng"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Voucher lọc nhớt Mitsubishi hoặc áo thun khi hóa đơn từ 2.200.000đ trở lên.",
+        "Nón Mitsubishi khi khách đặt lịch trước và đến đúng hẹn."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "3. Tại sao nên bảo dưỡng xe tại Mitsubishi Satsco?"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Đội ngũ kỹ thuật viên đạt chuẩn Mitsubishi Motors Việt Nam.",
+        "Trang thiết bị hiện đại, quy trình chuẩn hãng.",
+        "Không gian chờ thoải mái, có khu vực dành riêng cho trẻ em.",
+        "Áp dụng dịch vụ cho cả xe Mitsubishi và các thương hiệu khác."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Đặt lịch ngay hôm nay để nhận ưu đãi: 0938 109 510"
+    },
+    {
+      "type": "p",
+      "text": "MITSUBISHI SATSCO – Đại lý 3S chính hãng của Mitsubishi Motors Việt Nam"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Địa chỉ: 1A Hồng Hà, Phường Tân Sơn Hòa, TP. Hồ Chí Minh",
+        "Tổng đài hỗ trợ: 1900 98 99 98",
+        "Hotline Kinh Doanh: 094 7700 923",
+        "Hotline Dịch Vụ: 094 7700 923",
+        "Website: www.mitsubishisaigon.com"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/WEB_CTKM-DV.png",
+      "alt": "Ưu đãi bảo dưỡng Mitsubishi Satsco An Tâm Di Chuyển 2025"
+    }
+  ]
 }
+
+
 
 
 

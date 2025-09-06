@@ -60,6 +60,15 @@ const newsData = [
     excerpt:
       "Các nâng cấp dự kiến giúp Triton cải thiện trải nghiệm vận hành và an toàn.",
   },
+    {
+    slug: "mitsubishi-satsco-ctkm-dich-vu-moi",
+    title:
+      "[MITSUBISHI SATSCO] – CTKM DỊCH VỤ MƠI",
+    date: "2025-08-11",
+    image: "/images/WEB_CTKM-DV.png",
+    excerpt:
+      "ƯU ĐÃI BẢO DƯỠNG XE THÁNG 8 – AN TÂM DI CHUYỂN Từ 15/07 đến 31/08/2025.",
+  },
 ];
 
 export default newsData;
