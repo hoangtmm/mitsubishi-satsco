@@ -163,32 +163,26 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-black text-white fixed top-[60px] left-0 right-0 z-40">
           <div className="border-t border-white/10">
-            <a href="#" className="block px-4 py-3 border-b border-white/10 font-bold">TRANG CHỦ</a>
-            <div>
-              <button
-                className="w-full text-left px-4 py-3 border-b border-white/10 font-bold flex justify-between items-center"
-                onClick={() => setShowDropdown(!showDropdown)}
-              >
-                CÁC DÒNG XE
-                <span>{showDropdown ? "▲" : "▶"}</span>
-              </button>
-              {showDropdown && (
-                <div className="bg-black text-sm pl-6">
-                  <div className="py-2 border-b border-white/10">Xpander</div>
-                  <div className="py-2 border-b border-white/10">Pajero Sport</div>
-                  <div className="py-2 border-b border-white/10">Attrage</div>
-                </div>
-              )}
-            </div>
-            <a href="#" className="block px-4 py-3 border-b border-white/10 font-bold">BẢNG GIÁ XE</a>
-            <a href="#" className="block px-4 py-3 border-b border-white/10 font-bold">KHUYẾN MÃI</a>
-            <a href="#" className="block px-4 py-3 border-b border-white/10 font-bold">DỊCH VỤ</a>
-            <a href="#" className="block px-4 py-3 border-b border-white/10 font-bold">TIN TỨC</a>
+            <a href="/" className="block px-4 py-3 border-b border-white/10 font-bold">TRANG CHỦ</a>
+            <Link
+              to="/gioi-thieu"
+              className="block px-4 py-3 border-b border-white/10 font-bold"
+            >
+              GIỚI THIỆU
+            </Link>
+             <Link
+            to="/bang-gia-xe"
+            className="block px-4 py-3 border-b border-white/10 font-bold"
+          >
+            BẢNG GIÁ XE
+          </Link>
+
+            <a href="/thu-tuc-tra-gop" className="block px-4 py-3 border-b border-white/10 font-bold">THỦ TỤC TRẢ GÓP</a>
+            <a href="/tin-tuc" className="block px-4 py-3 border-b border-white/10 font-bold">TIN TỨC</a>
           </div>
         </div>
       )}
     </header>
   );
 };
-
 export default Header;
