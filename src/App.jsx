@@ -10,7 +10,6 @@ const App = () => {
     <div className="bg-gray-100 min-h-screen pt-[15px] overflow-x-hidden">
       <Header />
       <main >
-        
         <ScrollToTop />
         <Outlet />
         <QuickQuoteModal />

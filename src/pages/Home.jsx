@@ -5,27 +5,11 @@ import SupportBanner from "../components/SupportBanner";
 import WhyChooseSection from "../components/WhyChooseSection";
 import NewsSection from "../components/NewsSection";
 import DealerInfoSection from "../components/DealerInfoSection";
-import { Helmet } from "react-helmet-async";
 const Home = () => (
   <main className="pt-[80px] bg-gray-50 min-h-screen">
-    {/* SEO Head */}
-    <Helmet>
-      <title>Mitsubishi Tân Bình | Báo giá & Khuyến mãi xe Mitsubishi 2025</title>
-      <meta
-        name="description"
-        content="Mitsubishi Tân Bình – Đại lý Mitsubishi chính hãng tại TP.HCM. Cập nhật giá xe mới nhất, khuyến mãi, hỗ trợ trả góp. Liên hệ ngay để nhận báo giá chi tiết."
-      />
-    </Helmet>
-    {/* Carousel */}
     <SimpleCarousel />
-
-    {/* Section danh sách xe */}
     <section className="w-full max-w-[1700px] mx-auto py-12 px-2">
       <div className="text-center my-2">
-          {/* H1 chính cho trang Home */}
-    <h1 className="text-center text-2xl sm:text-3xl font-extrabold text-red-700 mt-4">
-      Mitsubishi Tân Bình – Báo giá & Khuyến mãi xe Mitsubishi 2025
-    </h1>
         <div className="font-bold text-xl sm:text-2xl uppercase text-[#141d2f]">
           DÒNG XE KINH DOANH TẠI
         </div>
@@ -40,13 +24,9 @@ const Home = () => (
         ))}
       </div>
     </section>
-
-    {/* Banner hỗ trợ */}
     <section className="bg-black w-full py-8 mb-8">
       <SupportBanner />
     </section>
-
-    {/* Các section khác */}
     <WhyChooseSection />
     <NewsSection />
     <DealerInfoSection />
