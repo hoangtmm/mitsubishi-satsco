@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/layouts/Header.jsx";
 import Footer from "./layouts/Footer";
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom";
 import QuickQuoteModal from "./components/QuickQuoteModal";
 import FloatingHotline from "./components/FloatingHotline";
 import ScrollToTop from "@/components/ScrollToTop";
