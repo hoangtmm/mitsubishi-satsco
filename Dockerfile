@@ -13,7 +13,7 @@ RUN npm install
 # Copy the rest of the project
 COPY . .
 
-# Build app (Next.js sẽ tạo .next folder)
+# Build app 
 RUN npm run build
 
 # Expose port 3000
