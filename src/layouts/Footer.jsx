@@ -143,6 +143,18 @@ const Footer = () => {
             <FaYoutube />
           </a>
         </div>
+
+        <p className="mt-5 text-center text-xs text-white/70">
+          designed by{" "}
+          <a
+            href="https://hoangdev.online/"
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:text-white transition-colors"
+          >
+            hoang.dev
+          </a>
+        </p>
       </div>
     </footer>
   );
